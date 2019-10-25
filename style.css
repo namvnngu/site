@@ -1,0 +1,107 @@
+/* Vintage Color Palettes (https://www.shutterstock.com/blog/25-free-retro-color-palettes) */
+@import url('https://fonts.googleapis.com/css?family=Modak|Roboto&display=swap');
+:root {
+    --color1: #e9e3e0;
+    --color2: #a49375;
+    --color3: #dd946d;
+    --color4: #a23219;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, .portfolio-container {
+    height: 100%;
+    width: 100%;
+    
+}
+
+/* Left Side */
+.left-side {
+    position: relative;
+    min-height: 100vh;
+    background: var(--color1);
+}
+
+/* Right Side  */
+.right-side {
+    background: var(--color3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.my-face {
+    height: 175px;
+    width: 175px;
+    margin: 30px;
+}
+
+img {
+    border-radius: 50%;
+    border: none;
+    box-shadow: 3px 1px 8px 1px rgb(209, 201, 201);
+    transform: scale(1.1);
+}
+
+.right-side h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Modak', cursive;
+    background: linear-gradient(to right, rgb(70, 68, 68),rgb(58, 59, 59),rgb(15, 13, 15),rgb(105, 105, 105));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 5px;
+}
+
+.right-side p {
+    font-size: 40px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation-item {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color4);
+    margin: 5px;
+}
+
+.navigation-item:hover {
+    color: var(--color3)
+}
+
+/* Footer  */
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+small {
+    font-weight: bold;
+}
+
+.fa-heart {
+    color: rgb(207, 73, 73);
+}
+
