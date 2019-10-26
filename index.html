@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nam Nguyen ❤</title>
+    <title>Nam Nguyen ❤ | Portfolio</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -21,17 +21,39 @@
 <body>
     <div class="portfolio-container row">
 
-        <div class="left-side col-sm-8">
+        <!-- Main Content -->
+        <div class="left-side col-md-8 order-2">
             <header>
-                <a href="" class="navigation-item">Home</a>
-                <a href="" class="navigation-item">Project</a>
-                <a href="" class="navigation-item">Education</a>
-                <a href="" class="navigation-item">Skills</a>
-                <a href="" class="navigation-item">Hobby</a>
+                <a href="#home" class="navigation-item">Home</a>
+                <a href="#about-me" class="navigation-item">About Me</a>
+                <a href="#projects" class="navigation-item">Projects</a>
+                <a href="#education" class="navigation-item">Education</a>
+                <a href="#skills" class="navigation-item">Skills</a>
             </header>
-
             <div class="portfolio-content container">
+                <!-- About Me  -->
+                <div class="card-item" id="about-me">
+                    <h2>About Me</h2>
+                    <div class="card-content"></div>
+                </div>
 
+                <!-- Projects -->
+                <div class="card-item" id="projects">
+                    <h2>Projects</h2>
+                    <div class="card-content"></div>
+                </div>
+
+                <!-- Education  -->
+                <div class="card-item" id="education">
+                    <h2>Education</h2>
+                    <div class="card-content"></div>
+                </div>
+
+                <!-- Skills  -->
+                <div class="card-item" id="skills">
+                    <h2>Skills</h2>
+                    <div class="card-content"></div>
+                </div>
             </div>
 
             <footer>
@@ -43,12 +65,20 @@
             </footer>
         </div>
 
-        <div class="right-side col-sm-4">
+        <!-- Introduction -->
+        <div id="home" class="right-side col-md-4 order-1">
             <div class="my-face">
                 <img src="my-face.jpg" alt="My nerd face">
             </div>
             <h1>Nam Nguyen</h1>
             <p>👨‍💻</p>
+            <ul class="contact-list">
+                <li><a href="https://www.linkedin.com/in/nam-nguyen-cs/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/nnfunny" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/nam.viet.nguyen/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com/vietnam.nguyen.186" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/namnguyenDev" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            </ul>
         </div>
 
     </div>

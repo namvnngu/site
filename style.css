@@ -1,30 +1,31 @@
 /* Vintage Color Palettes (https://www.shutterstock.com/blog/25-free-retro-color-palettes) */
 @import url('https://fonts.googleapis.com/css?family=Modak|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
 :root {
     --color1: #e9e3e0;
-    --color2: #a49375;
-    --color3: #dd946d;
-    --color4: #a23219;
+    --color2: rgb(81, 157, 113);
+    --color3: rgba(156, 214, 161, 0.61);
+    --color4: rgb(26, 155, 80);
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
-html, body, .portfolio-container {
-    height: 100%;
-    width: 100%;
-    
+.row {
+    margin: 0;
 }
+
 
 /* Left Side */
 .left-side {
     position: relative;
     min-height: 100vh;
     background: var(--color1);
+    padding: 0;
 }
 
 /* Right Side  */
@@ -44,8 +45,8 @@ html, body, .portfolio-container {
 
 img {
     border-radius: 50%;
-    border: none;
-    box-shadow: 3px 1px 8px 1px rgb(209, 201, 201);
+    border: 4px solid #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transform: scale(1.1);
 }
 
@@ -63,11 +64,18 @@ img {
     font-size: 40px;
 }
 
+@media (max-width: 768px) {
+    .right-side {
+        height: 100vh;
+    }
+}
+
 /* Header */
 header {
     width: 100%;
     position: sticky;
     top: 0px;
+    padding: 10px;
 
     display: flex;
     justify-content: center;
@@ -76,13 +84,17 @@ header {
 
 .navigation-item {
     font-size: 16px;
-    font-weight: bold;
     color: var(--color4);
     margin: 5px;
 }
 
 .navigation-item:hover {
     color: var(--color3)
+}
+
+header a {
+    text-decoration: none !important;
+    font-weight: bolder; 
 }
 
 /* Footer  */
@@ -103,5 +115,48 @@ small {
 
 .fa-heart {
     color: rgb(207, 73, 73);
+}
+
+/* Contact List */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.contact-list a {
+    background:#888d92;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-list a:hover {
+    background: #494b4d;
+}
+
+/* Card  */
+.card-item {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    margin: 30px 5px;
+}
+
+.card-item h2 {
+    font-weight: bold;
+    color: #545e69;
 }
 
