@@ -8,10 +8,10 @@
   --color4: rgb(98, 119, 110);
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-}
+} */
 
 /* Particles */
 .background {
