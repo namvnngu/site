@@ -8,6 +8,11 @@
   --color4: rgb(98, 119, 110);
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 /* Particles */
 .background {
   position:absolute;
@@ -193,3 +198,36 @@ small {
   font-weight: bold;
   color: #545e69;
 }
+#projects .card-content .project {
+  margin: 20px 0 20px 0;
+}
+
+#projects .card-content .project p {
+  margin: 0; 
+}
+
+#projects .card-content .project h4 {
+  font-weight: bold; 
+  color: #517574;
+}
+#education .card-content h4 {
+  font-weight: bold; 
+  color: #517574;
+}
+
+#skills .card-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#skills .card-content p {
+  margin: 2px 5px;
+  padding: 4px 9px;
+  background: #517574;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 20px;
+}
+
+
