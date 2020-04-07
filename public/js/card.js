@@ -1,8 +1,9 @@
-function addCard(id, h2Name) {
+function addCard(id, idA, h2Name) {
     let portfolioContent = document.querySelector(".portfolio-content");
     let div = document.createElement("div");
     let h2 = document.createElement("h2");
     let content = document.createElement("div");
+    let support = document.createElement("div");
 
     div.classList.add("card-item");
     div.id = id;
@@ -11,16 +12,21 @@ function addCard(id, h2Name) {
 
     content.classList.add("card-content");
     
+    support.id = idA;
+    support.classList.add("support");
+
     div.appendChild(h2);
     div.appendChild(content);
+    portfolioContent.appendChild(support); 
     portfolioContent.appendChild(div);
 }
 
 let ids = ["about-me", "projects", "education", "skills"];
+let idsA = ["about-me-a", "projects-a", "education-a", "skills-a"];
 let h2Names = ["About Me", "Projects", "Education", "Skills"];
 
 for(let index = 0; index < ids.length; index++) {
-    addCard(ids[index], h2Names[index]);
+    addCard(ids[index], idsA[index], h2Names[index]);
 }
 
 // About me
@@ -49,7 +55,7 @@ function addProject(name, paragraphs, link) {
     })
 
     anchorLine = document.createElement('p');
-    anchorLine.innerHTML = `Source code: <a href=${link['url']} target"_blank">${link['name']}</a>`
+    anchorLine.innerHTML = `Source code: <a href=${link['url']} target="_blank">${link['name']}</a>`
     div.append(anchorLine);
 
     div.appendChild(document.createElement('hr'));

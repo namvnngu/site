@@ -23,12 +23,13 @@
   <div class="portfolio-container row">
     <!-- Main Content -->
     <div class="left-side order-2">
+
       <header>
-        <a href="#home" class="navigation-item scroll">Home</a>
-        <a href="#about-me" class="navigation-item scroll">About Me</a>
-        <a href="#projects" class="navigation-item scroll">Projects</a>
-        <a href="#education" class="navigation-item scroll">Education</a>
-        <a href="#skills" class="navigation-item scroll">Skills</a>
+        <a href="#home" class="navigation-item">Home</a>
+        <a href="#about-me-a" class="navigation-item">About Me</a>
+        <a href="#projects-a" class="navigation-item">Projects</a>
+        <a href="#education-a" class="navigation-item">Education</a>
+        <a href="#skills-a" class="navigation-item">Skills</a>
       </header>
       <div class="portfolio-content container">
         <!-- Cards -->
@@ -77,25 +78,32 @@
     links.forEach(each => (each.onclick = scrollAnchors));
   }
 
-  function scrollAnchors(e, respond = null) {
-    const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
-    e.preventDefault();
-    var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
-    const targetAnchor = document.querySelector(targetID);
-    if (!targetAnchor) return;
-    const originalTop = distanceToTop(targetAnchor);
-    window.scrollBy({ top: originalTop - 80, left: 0, behavior: 'smooth' });
-    const checkIfDone = setInterval(function() {
-      const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
-      if (distanceToTop(targetAnchor) === 0 || atBottom) {
-        targetAnchor.tabIndex = '-1';
-        targetAnchor.focus();
-        window.history.pushState('', '', targetID);
-        clearInterval(checkIfDone);
-      }
-    }, 100);
-  }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
 
-  scrollTo();
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top,
+        }, 800, function(){
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
 </script>
 </html>
