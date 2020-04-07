@@ -15,7 +15,7 @@ html {
 
 /* Particles */
 .background {
-  position:absolute;
+  position: absolute;
   display: block;
   top: 0;
   left: 0;
@@ -27,6 +27,10 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .row {
@@ -203,15 +207,15 @@ small {
 }
 
 #projects .card-content .project p {
-  margin: 0; 
+  margin: 0;
 }
 
 #projects .card-content .project h4 {
-  font-weight: bold; 
+  font-weight: bold;
   color: #517574;
 }
 #education .card-content h4 {
-  font-weight: bold; 
+  font-weight: bold;
   color: #517574;
 }
 
@@ -229,5 +233,3 @@ small {
   color: #fff;
   border-radius: 20px;
 }
-
-
