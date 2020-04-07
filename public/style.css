@@ -8,6 +8,15 @@
   --color4: rgb(98, 119, 110);
 }
 
+/* Particles */
+.background {
+  position:absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +76,10 @@ img {
   font-size: 24px;
   color: #778492;
   font-weight: 400;
+}
+h6 {
+  color: #778492;
+  text-align: center;
 }
 
 .right-side p {
@@ -133,6 +146,7 @@ small {
 
 /* Contact List */
 .contact-list {
+  z-index: 1;
   list-style: none;
 
   display: flex;
