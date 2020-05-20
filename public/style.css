@@ -1,6 +1,7 @@
 /* Vintage Color Palettes (https://www.shutterstock.com/blog/25-free-retro-color-palettes) */
 @import url("https://fonts.googleapis.com/css?family=Modak|Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
 :root {
   --color1: #e9e3e0;
   --color2: rgb(81, 157, 113);
@@ -82,13 +83,19 @@ img {
 
 .right-side h2 {
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   color: #778492;
   font-weight: 400;
 }
 h6 {
   color: #778492;
   text-align: center;
+}
+
+#my-name {
+  color: #5e4f63;
+  font-size: 45px;
+  font-family: "Balsamiq Sans", cursive;
 }
 
 .right-side p {

@@ -1,109 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Nam Nguyen ❤ | Portfolio</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Nam Nguyen ❤ | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <!-- My own CSS -->
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- My own CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome 5 -->
+    <script src="js/font-awesome.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+  </head>
 
-  <!-- Font Awesome 5 -->
-  <script src="js/font-awesome.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
-</head>
+  <body>
+    <div class="portfolio-container row" style="background: #dae3e7;">
+      <!-- Main Content -->
+      <div class="left-side order-2 col-md-8">
+        <header>
+          <a href="#home" class="navigation-item">Home</a>
+          <a href="#about-me-a" class="navigation-item">About Me</a>
+          <a href="#projects-a" class="navigation-item">Projects</a>
+          <a href="#education-a" class="navigation-item">Education</a>
+          <a href="#skills-a" class="navigation-item">Skills</a>
+        </header>
+        <div class="portfolio-content container">
+          <!-- Cards -->
+        </div>
 
-<body>
-  <div class="portfolio-container row" style="background: #dae3e7">
-    <!-- Main Content -->
-    <div class="left-side order-2 col-md-8">
-
-      <header>
-        <a href="#home" class="navigation-item">Home</a>
-        <a href="#about-me-a" class="navigation-item">About Me</a>
-        <a href="#projects-a" class="navigation-item">Projects</a>
-        <a href="#education-a" class="navigation-item">Education</a>
-        <a href="#skills-a" class="navigation-item">Skills</a>
-      </header>
-      <div class="portfolio-content container">
-        <!-- Cards -->
+        <footer>
+          <small>
+            Made with
+            <i class="fas fa-heart"></i>
+            by Nam Nguyen
+          </small>
+        </footer>
       </div>
 
-      <footer>
-        <small>
-          Made with
-          <i class="fas fa-heart"></i>
-          by Nam Nguyen
-        </small>
-      </footer>
-    </div>
-
-    <!-- Introduction -->
-    <div id="home" class="right-side order-1 col-md-4">
-      <canvas class="background"></canvas>
-      <div class="my-face">
-        <img src="my-face.jpg" alt="My nerd face" />
+      <!-- Introduction -->
+      <div id="home" class="right-side order-1 col-md-4">
+        <canvas class="background"></canvas>
+        <div class="my-face">
+          <img src="my-face.jpg" alt="My nerd face" />
+        </div>
+        <h1>
+          <span>Hi! I am</span>
+          <span id="my-name">Nam</span>
+        </h1>
+        <h2>Junior Software Developer</h2>
+        <h6>An elementary competitive programmer</h6>
+        <p>👨‍💻</p>
+        <ul class="contact-list">
+          <!-- Contact List -->
+        </ul>
       </div>
-      <h1>Nam Nguyen</h1>
-      <h2>A university student pursues software development</h2>
-      <h6>An elementary programming competitor</h6>
-      <p>👨‍💻</p>
-      <ul class="contact-list">
-        <!-- Contact List -->
-      </ul>
     </div>
-  </div>
-</body>
-<script src="js/contact.js"></script>
-<script src="js/card.js"></script>
-<script>
-  window.onload = function() {
-    Particles.init({
-      selector: '.background',
-      color: ['#93b9c7'],
-      maxParticles: 500,
-      breakpoint: 500,
-    })
-  }
+  </body>
+  <script src="js/contact.js"></script>
+  <script src="js/card.js"></script>
+  <script>
+    window.onload = function () {
+      Particles.init({
+        selector: ".background",
+        color: ["#93b9c7"],
+        maxParticles: 500,
+        breakpoint: 500,
+      });
+    };
 
+    function scrollTo() {
+      const links = document.querySelectorAll(".scroll");
+      links.forEach((each) => (each.onclick = scrollAnchors));
+    }
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on("click", function (event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
 
-  function scrollTo() {
-    const links = document.querySelectorAll('.scroll');
-    links.forEach(each => (each.onclick = scrollAnchors));
-  }
+          // Store hash
+          var hash = this.hash;
 
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
-      if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
-
-        // Store hash
-        var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top,
-        }, 800, function(){
-
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            }
+          );
+        } // End if
+      });
     });
-  });
-</script>
+  </script>
 </html>
+
