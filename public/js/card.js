@@ -21,9 +21,9 @@ function addCard(id, idA, h2Name) {
   portfolioContent.appendChild(div);
 }
 
-let ids = ["about-me", "projects", "education", "skills"];
-let idsA = ["about-me-a", "projects-a", "education-a", "skills-a"];
-let h2Names = ["About Me", "Projects", "Education", "Skills"];
+let ids = ["about-me", "exp", "projects", "education", "skills"];
+let idsA = ["about-me-a", "exp-a", "projects-a", "education-a", "skills-a"];
+let h2Names = ["About Me", "Experience", "Projects", "Education", "Skills"];
 
 for (let index = 0; index < ids.length; index++) {
   addCard(ids[index], idsA[index], h2Names[index]);
@@ -37,6 +37,8 @@ let aboutMeP = `
     <p>I am seeking opportunities to work as a software developer or web developer at the moment. Please feel free to contact me for a position in your company.</p>
     `;
 aboutMeCard.innerHTML = aboutMeP;
+
+// Experience Card
 
 // Projects
 function addProject(name, paragraphs, link) {
@@ -147,4 +149,3 @@ skills.forEach((skill) => {
   skillItem.innerHTML = skill;
   skillCard.appendChild(skillItem);
 });
-
