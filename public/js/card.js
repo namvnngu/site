@@ -21,9 +21,9 @@ function addCard(id, idA, h2Name) {
   portfolioContent.appendChild(div);
 }
 
-let ids = ["about-me", "exp", "projects", "education", "skills"];
-let idsA = ["about-me-a", "exp-a", "projects-a", "education-a", "skills-a"];
-let h2Names = ["About Me", "Experience", "Projects", "Education", "Skills"];
+let ids = ["about-me", "skills", "exp", "projects", "education"];
+let idsA = ["about-me-a", "skills-a", "exp-a", "projects-a", "education-a"];
+let h2Names = ["About Me", "Skills", "Experience", "Projects", "Education"];
 
 for (let index = 0; index < ids.length; index++) {
   addCard(ids[index], idsA[index], h2Names[index]);
@@ -33,10 +33,96 @@ for (let index = 0; index < ids.length; index++) {
 let aboutMeCard = document.querySelector("#about-me .card-content");
 let aboutMeP = `
     <p>Hi, I am Nam. I am a funny geek who loves building programs that makes people’s lives easier. I am passionate about web development. I am pursuing to be a professional programming competitor.</p>
-    <p>My favorite programming languages are Javascript, C++ and Java. I cherish spending my spare time coding and keeping myself learning new programming languages.</p>
+    <p>My favorite programming languages are Javascript, C++ and C#. I cherish spending my spare time coding and keeping myself learning new programming languages.</p>
     <p>I am seeking opportunities to work as a software developer or web developer at the moment. Please feel free to contact me for a position in your company.</p>
     `;
 aboutMeCard.innerHTML = aboutMeP;
+
+// Skills
+let skills = [
+  "Python",
+  "Javascript",
+  "Java",
+  "C++",
+  "HTML5",
+  "CSS3",
+  "Git",
+  "Node.js",
+  "React.js",
+  "Git",
+  "MySQL",
+  "Final Cut Pro",
+  "Self-learning",
+  "Teamwork",
+  "Self-mamnagement",
+];
+
+let skillTypes = [
+  "Programming Languges",
+  "Frameworks/Platforms",
+  "Database",
+  "Version Control",
+  "IDE/Code Editor",
+  "Others"
+]
+let skillCard = document.querySelector("#skills .card-content");
+
+// skills.forEach((skill) => {
+//   skillItem = document.createElement("p");
+//   skillItem.innerHTML = skill;
+//   skillCard.appendChild(skillItem);
+// });
+skillTypes.forEach((type) => {
+  typeItem = document.createElement("div");
+  typeItem.classList.add("type-item");
+  typeItem.innerHTML = `<span style="font-weight: bold; margin-bottom: 10px">${type}<span/>`;
+  skillCard.appendChild(typeItem);
+})
+
+let subCards = document.querySelectorAll("#skills .card-content .type-item");
+// Skill Programming Languages
+let programmingLanguages = ["C++", "C#", "Python", "HTML5", "CSS3", "Javascript"]
+programmingLanguages.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[0].appendChild(skillItem);
+});
+// Skill Frameworks/Platforms
+let framePlat = ["React.js", "Node.js"]
+framePlat.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[1].appendChild(skillItem);
+});
+// Skill Database
+let database = ["MySQL"]
+database.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[2].appendChild(skillItem);
+});
+// Skill Version Control
+let versionControl = ["Git", "Github"]
+versionControl.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[3].appendChild(skillItem);
+});
+// Skill IDE/Code Editor
+let editor = ["Vim", "VSC"]
+editor.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[4].appendChild(skillItem);
+});
+// Others
+let other = ["Final Cut Pro", "Self-taught", "Teamwork", "Self-management"]
+other.forEach((skill) => {
+  skillItem = document.createElement("p");
+  skillItem.innerHTML = skill;
+  subCards[5].appendChild(skillItem);
+});
+
 
 // Experience Card
 
@@ -50,14 +136,27 @@ function addProject(name, paragraphs, link) {
   h4.innerHTML = name;
   div.appendChild(h4);
 
-  paragraphs.forEach((paragraph) => {
-    p = document.createElement("p");
-    p.innerHTML = paragraph;
-    div.appendChild(p);
-  });
+  
+  p = document.createElement("div");
+  p.innerHTML = `
+    <li>
+      <span style="font-weight: bold">Project Description:  </span>
+      ${paragraphs["description"]}
+    </li>
+    <li>
+      <span style="font-weight: bold">Technologies:  </span>
+      ${paragraphs["tech"]}
+    </li>
+  `;
+  div.appendChild(p);
+ 
 
-  anchorLine = document.createElement("p");
-  anchorLine.innerHTML = `Source code: <a href=${link["url"]} target="_blank">${link["name"]}</a>`;
+
+  anchorLine = document.createElement("li");
+  anchorLine.innerHTML = `
+    <span style="font-weight: bold">Source Code:  </span>
+    <a href=${link["url"]} target="_blank">${link["name"]}</a>
+    `;
   div.append(anchorLine);
 
   div.appendChild(document.createElement("hr"));
@@ -68,14 +167,14 @@ function addProject(name, paragraphs, link) {
 
 names = ["Talkie Chattie", "Vocabulary Cellar"];
 projects = [
-  [
-    "Project Description: A web application allows users to swap their stories one another in real time, which is controlled and encrypted by Firebase.",
-    "Technologies: React.js , Firebase, Node.js",
-  ],
-  [
-    "Project Description: A cross-platform desktop application assists Enlgish learners to store all related information of vocabularies to reduce 'forgetting curve' and expand vocabulary",
-    "Technologies: React.js , Electron.js",
-  ],
+  {
+    "description": "A web application allows users to swap their stories one another in real time, which is controlled and encrypted by Firebase.",
+    "tech": "React.js , Firebase, Node.js",
+  },
+  {
+    "description": "A cross-platform desktop application assists Enlgish learners to store all related information of vocabularies to reduce 'forgetting curve' and expand vocabulary",
+    "tech": "React.js , Electron.js",
+  },
 ];
 links = [
   {
@@ -89,7 +188,6 @@ links = [
 ];
 
 for (let i = 0; i < names.length; i++) {
-  console.log(names[i]);
   addProject(names[i], projects[i], links[i]);
 }
 
@@ -122,30 +220,3 @@ let diplomaText = `
 `;
 diploma.innerHTML = diplomaText;
 educationCard.appendChild(diploma);
-
-// Skills
-let skills = [
-  "Python",
-  "Javascript",
-  "Java",
-  "C++",
-  "HTML5",
-  "CSS3",
-  "Git",
-  "Node.js",
-  "React.js",
-  "Git",
-  "MySQL",
-  "Final Cut Pro",
-  "Self-learning",
-  "Teamwork",
-  "Self-mamnagement",
-];
-let skillCard = document.querySelector("#skills .card-content");
-let skillItem;
-
-skills.forEach((skill) => {
-  skillItem = document.createElement("p");
-  skillItem.innerHTML = skill;
-  skillCard.appendChild(skillItem);
-});
