@@ -139,30 +139,30 @@ function addProject(name, paragraphs, link) {
   
   p = document.createElement("div");
   p.innerHTML = `
-    <li>
+    <p>
       <span style="font-weight: bold">Project Description:  </span>
       ${paragraphs["description"]}
-    </li>
-    <li>
+    </p>
+    <p>
       <span style="font-weight: bold">Technologies:  </span>
       ${paragraphs["tech"]}
-    </li>
+    </p>
   `;
   div.appendChild(p);
  
 
 
-  anchorLine = document.createElement("li");
+  anchorLine = document.createElement("p");
   anchorLine.innerHTML = `
     <span style="font-weight: bold">Source Code:  </span>
     <a href=${link["url"]} target="_blank">${link["name"]}</a>
     `;
   div.append(anchorLine);
 
-  div.appendChild(document.createElement("hr"));
 
   div.classList.add("project");
   projectCard.appendChild(div);
+  return div;
 }
 
 names = ["Talkie Chattie", "Vocabulary Cellar"];
@@ -188,7 +188,10 @@ links = [
 ];
 
 for (let i = 0; i < names.length; i++) {
-  addProject(names[i], projects[i], links[i]);
+  let divElement = addProject(names[i], projects[i], links[i]);
+  if(i != names.length - 1) {
+    divElement.appendChild(document.createElement("hr"));
+  }
 }
 
 // Education

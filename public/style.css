@@ -230,10 +230,14 @@ small {
   margin: 0;
 }
 
+#projects .card-content .project hr:last-child {
+}
+
 #projects .card-content .project h4 {
   font-weight: bold;
   color: #517574;
 }
+
 #education .card-content h4 {
   font-weight: bold;
   color: #517574;
