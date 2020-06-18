@@ -75,7 +75,7 @@ let skillCard = document.querySelector("#skills .card-content");
 skillTypes.forEach((type) => {
   typeItem = document.createElement("div");
   typeItem.classList.add("type-item");
-  typeItem.innerHTML = `<span style="font-weight: bold; margin-bottom: 10px">${type}<span/>`;
+  typeItem.innerHTML = `<span style="font-weight: bold; margin-bottom: 10px; font-size: 15px">${type}<span/>`;
   skillCard.appendChild(typeItem);
 })
 
