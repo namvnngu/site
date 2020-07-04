@@ -23,13 +23,16 @@ li {
 }
 
 :root {
+  --black: #121212;
   --dark: #2d3748;
   --white: #ffffff;
   --gray: #4e5b6a;
+  --blue-white: #f0f6ff;
+  --light-gray: gray;
   --font-zero: 12px;
   --font-zero-one: 16px;
   --font-one: 20px;
-  --font-two: 27px;
+  --font-two: 30px;
   --font-three: 40px;
 }
 
@@ -51,6 +54,7 @@ li {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .landing-page header {
@@ -70,6 +74,9 @@ li {
   font-size: var(--font-one);
   font-weight: bold;
   margin: 0 10px;
+}
+.landing-page header a:hover {
+  color: var(--light-gray);
 }
 
 .landing-page .brief-introduction {
@@ -95,7 +102,7 @@ li {
   font-family: "Balsamiq Sans", cursive !important;
 }
 .landing-page .brief-introduction .title-name small {
-  color: gray;
+  color: var(--light-gray);
 }
 .landing-page .brief-introduction .title-name img {
   border-radius: 50%;
@@ -132,13 +139,275 @@ li {
   margin-top: 100px;
 }
 
+/*Body*/
+.body-container {
+  background: var(--dark);
+  padding: 50px 0;
+}
 
-@media screen and (max-width: 720px) {
+/*Me*/
+.body-container .me {
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  border-radius: 8px;
+
+  padding: 30px;
+  margin: 50px 0;
+  border: 3px solid #fff;
+  color: var(--white);
+  transition: all 500ms;
+}
+.body-container .me:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-1px) scale(1.02);
+}
+.body-container .me p {
+  font-size: var(--font-zero-one);
+}
+.body-container .me .hi {
+  font-family: "Balsamiq Sans", cursive !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--font-two);
+}
+
+/*Skill*/
+.body-container .skills-container {
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  border-radius: 8px;
+
+  padding: 30px;
+  margin: 50px 0;
+  border: 3px solid #fff;
+  color: var(--white);
+  transition: all 500ms;
+}
+.body-container .skills-container:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-1px) scale(1.02);
+}
+.body-container .skills-container .hi {
+  font-family: "Balsamiq Sans", cursive !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--font-two);
+}
+.body-container .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.body-container .skills .skill-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+}
+.body-container .skills .skill-item .skill-icon {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 10px;    
+}
+.body-container .skills .skill-item img {
+  height: 100px;
+  width: 100px;
+}
+.body-container .skills .skill-item .skill-name {
+  font-size: var(--font-zero-one);
+  margin-bottom: 5px;
+}
+.body-container .skills .skill-item .description {
+  font-size: var(--font-zero);
+  margin-bottom: 15px;
+  text: italic;
+}
+.body-container .skills .skill-item small {
+  font-size: 8px;
+}
+
+/*Education*/
+.body-container .education {
+  padding: 30px;
+  margin: 50px 0;
+  color: var(--white);
+}
+.body-container .education .hi {
+  font-family: "Balsamiq Sans", cursive !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--font-two);
+}
+.body-container .education .education-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body-container .education .education-list .education-item {
+  border-radius: 8px;
+  border: 3px solid #fff;
+  width: auto;
+  height: auto;
+  margin: 20px 20px;
+  padding: 20px;
+
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  transition: all 500ms;
+}
+.body-container .education .education-list .education-item:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-1px) scale(1.02);
+}
+.body-container .education .education-list .education-item .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.body-container .education .education-list .education-item .period {
+  font-size: var(--font-zero-one);
+  font-style: italic;
+}
+.body-container .education .education-list .education-item .location {
+  font-size: var(--font-zero-one);
+}
+.body-container .education .education-list .education-item ul {
+  font-size: var(--font-zero-one);
+}
+.body-container .education .education-list .education-item li {
+  list-style: square !important;
+  transform: translateX(10px);
+}
+
+/*Projects*/
+.body-container .projects {
+  padding: 30px 0;
+  margin: 50px 0;
+
+  border-radius: 8px;
+  border: 3px solid #fff;
+  color: var(--white);
+}
+.body-container .projects .hi {
+  font-family: "Balsamiq Sans", cursive !important;
+  font-weight: bold;
+  text-align: center;
+  font-size: var(--font-two);
+}
+.body-container .projects .project-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.body-container .projects .project-list .project {
+  padding: 10px 30px;
+}
+
+
+.body-container .projects .project-list .project img {
+  height: 200px;
+  width: 300px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: all 500ms;
+}
+.body-container .projects .project-list .project:hover img{
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-1px) scale(1.05);
+}
+.body-container .projects .project-list .project .project-name {
+  color: var(--blue-white);
+  font-weight: bold;
+  font-size: var(--font-zero-one);
+}
+.body-container .projects .project-list .project .project-technologies {
+  color: var(--white);
+  font-weight: 400;
+  font-size: var(--font-zero);
+}
+
+/*Come*/
+.come {
+  height: 30px;
+  width: 50px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-height: 600px) {
   :root {
     --font-zero: 12px;
     --font-zero-one: 14px;
     --font-one: 16px;
-    --font-two: 18px;
+    --font-two: 30px;
+    --font-three: 22px;
+  }
+  /*Landing Page*/
+  .landing-page .brief-introduction {
+    margin-top: 50px;
+  }
+  .landing-page .brief-introduction .title-name .name {
+    margin: 1px 0;
+  }
+  .landing-page .welcome {
+    margin: 50px 0;
+  }
+}
+
+/*Footer*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+small {
+  font-weight: bold;
+}
+
+.heart-icon {
+  color: rgb(207, 73, 73);
+  margin: 0 5px;
+}
+@media (max-height: 600px) and (max-width: 1200px) {
+  :root {
+    --font-zero: 12px;
+    --font-zero-one: 12px;
+    --font-one: 14px;
+    --font-two: 30px;
+    --font-three: 18px;
+  }
+  /*Landing Page*/
+  .landing-page .brief-introduction {
+    margin-top: 40px;
+  }
+  .landing-page .brief-introduction .title-name .name {
+    margin: 1px 0;
+  }
+  .landing-page .welcome {
+    margin: 2px 0;
+  }
+  .landing-page .brief-introduction .social {
+    margin: 5px;
+  }
+}
+@media (max-width: 720px) {
+  /*Landing Page*/
+  :root {
+    --font-zero: 12px;
+    --font-zero-one: 14px;
+    --font-one: 16px;
+    --font-two: 30px;
     --font-three: 20px;
   }
   .landing-page .brief-introduction {
@@ -151,7 +420,6 @@ li {
   }
   .landing-page .brief-introduction .title-name .name {
     padding-right: 0;
-    word-break: auto;
   }
   .landing-page .brief-introduction .social {
     display: flex;
@@ -165,16 +433,32 @@ li {
   .landing-page .welcome {
     margin: 5px 0;
   }
+
+  /*Skills*/
+  .body-container .skills {
+    flex-direction: column;
+  }
+  .body-container .skills .skill-item {
+    margin: 20px 0;
+  }
+
+  /*Education*/
+  .body-container .education .education-list {
+    flex-direction: column;
+  }
+
+  .body-container .projects .project-list {
+    flex-direction: column;
+  }
 }
 
-@media (max-height: 600px) {
+
+@media (min-height: 1000px) {
+  /*Landing Page*/
   .landing-page .brief-introduction {
-    margin-top: 60px;
-  }
-  :root {
-    --font-three: 30px;
+    margin-top: 200px;
   }
   .landing-page .welcome {
-    margin: 5px 0;
+    margin: 100px 0;
   }
 }

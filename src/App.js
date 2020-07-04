@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import LoadingCat from './components/Loading';
 import LandingPage from './components/LandingPage';
+import Body from './components/Body';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +21,7 @@ function App() {
         (
           <div className="nam-nguyen">
             <LandingPage />
-             
+            <Body/>
           </div>
         )
       }
