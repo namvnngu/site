@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Avenir, -system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-seriff !important;
+}
+
+html,
+body,
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+li {
+  list-style: none !important;
+}
+
+:root {
+  --dark: #2d3748;
+  --white: #ffffff;
+  --gray: #4e5b6a;
+  --font-zero: 12px;
+  --font-zero-one: 16px;
+  --font-one: 20px;
+  --font-two: 27px;
+  --font-three: 40px;
+}
+
+/* Cat Loading  */
+.loading-cat {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Landing Page */
+.landing-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.landing-page header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.landing-page header a {
+  color: var(--gray);
+  font-size: var(--font-one);
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.landing-page .brief-introduction {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing-page .brief-introduction .title-name .title {
+  text-transform: uppercase;
+  font-size: var(--font-zero-one);
+  color: var(--gray);
+}
+.landing-page .brief-introduction .title-name .name {
+  font-size: var(--font-three);
+  color: var(--dark);
+  margin: 10px 0;
+  font-weight: bold;
+  padding-right: 200px;
+}
+.landing-page .brief-introduction .title-name .name span {
+  font-family: "Balsamiq Sans", cursive !important;
+}
+.landing-page .brief-introduction .title-name small {
+  color: gray;
+}
+.landing-page .brief-introduction .title-name img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 40px 0;
+}
+.landing-page .brief-introduction .title-name .email-container {
+  width: fit-content;
+}
+.landing-page .brief-introduction .title-name .email {
+  color: var(--gray);
+  transform: translateY(-10px);
+  transition: all 0.2s ease-in-out;
+}
+.landing-page .brief-introduction .title-name .email-line {
+  position: absolute;
+  width: 0;
+  visibility: hidden;
+  border: 1px solid var(--dark);
+  transition: all 0.5s ease-in-out;
+}
+.landing-page .brief-introduction .title-name .email-container:hover > .email-line {
+  width: 161.3px;
+  visibility: visible; 
+}
+.landing-page .brief-introduction .social .social-icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px 0;
+  color: var(--gray);
+}
+
+.landing-page .welcome {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 720px) {
+  :root {
+    --font-zero: 12px;
+    --font-zero-one: 14px;
+    --font-one: 16px;
+    --font-two: 18px;
+    --font-three: 20px;
+  }
+  .landing-page .brief-introduction {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .landing-page .brief-introduction .title-name .name {
+    padding-right: 0;
+    word-break: auto;
+  }
+  .landing-page .brief-introduction .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+  }
+  .landing-page .brief-introduction .social .social-icon {
+    margin: 0 10px;
+  }
+}
