@@ -446,7 +446,9 @@ small {
   .body-container .education .education-list {
     flex-direction: column;
   }
+}
 
+@media (max-width: 1210px) {
   .body-container .projects .project-list {
     flex-direction: column;
   }
