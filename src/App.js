@@ -20,7 +20,7 @@ function App() {
         (
           <div className="nam-nguyen">
             <LandingPage />
-             <div style={{ height: "200vh" }}></div>
+             
           </div>
         )
       }

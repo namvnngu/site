@@ -28,7 +28,7 @@ const LandingPage = () => {
             <div className="brief-introduction">
                 <div className="title-name">
                     <a href="https://lottiefiles.com/18123-developer" target="_blank" rel="noopener noreferrer">
-                        <Lottie options={config} height={350} width={350}/>
+                        <Lottie options={config} height={300} width={300}/>
                     </a>
                     <div className="title">Junior Web Developer</div>
                     <small>Elementary Competitive Programmer</small>

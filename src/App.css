@@ -108,7 +108,6 @@ li {
 }
 .landing-page .brief-introduction .title-name .email {
   color: var(--gray);
-  transform: translateY(-10px);
   transition: all 0.2s ease-in-out;
 }
 .landing-page .brief-introduction .title-name .email-line {
@@ -130,9 +129,7 @@ li {
 }
 
 .landing-page .welcome {
-  position: absolute;
-  bottom: 0;
-  margin-bottom: 20px;
+  margin-top: 100px;
 }
 
 
@@ -146,7 +143,7 @@ li {
   }
   .landing-page .brief-introduction {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,5 +161,20 @@ li {
   }
   .landing-page .brief-introduction .social .social-icon {
     margin: 0 10px;
+  }
+  .landing-page .welcome {
+    margin: 5px 0;
+  }
+}
+
+@media (max-height: 600px) {
+  .landing-page .brief-introduction {
+    margin-top: 60px;
+  }
+  :root {
+    --font-three: 30px;
+  }
+  .landing-page .welcome {
+    margin: 5px 0;
   }
 }
