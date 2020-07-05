@@ -5,7 +5,7 @@ import Stationery from '../../static/Projects/stationery.png';
 
 const Projects = () => {
 	return (
-		<div className="projects">
+		<div className="projects" id="projects">
 			<p className="hi">Side Projects</p>
 			<div className="project-list">
 				<Project

@@ -4,7 +4,7 @@ const diplomaDetail = ["Major: Information Technology", "Achieved WAM - 86.9"];
 const bachelorDetail = ["Estimated completion July 2021", "Awarded Deakin STEM Scholarship (20% of total course tuition fees)"];
 const Education = () => {
 	return (
-		<div className="education">
+		<div className="education" id="education">
 			<p className="hi">Education</p>
 			<div className="education-list">
 				<EducationItem

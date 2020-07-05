@@ -339,9 +339,6 @@ li {
   height: 30px;
   width: 50px;
 }
-html {
-  scroll-behavior: smooth;
-}
 
 @media (max-height: 600px) {
   :root {

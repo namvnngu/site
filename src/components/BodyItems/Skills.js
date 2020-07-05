@@ -6,7 +6,7 @@ import Others from '../../static/others.svg';
 
 const Skills = () => {
 	return (
-		<div className="skills-container">
+		<div className="skills-container" id="skills">
 			<p className="hi">Skills</p>
 			<div id="skills" className="skills" >
 
