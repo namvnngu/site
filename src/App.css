@@ -334,10 +334,12 @@ li {
   font-size: var(--font-zero);
 }
 
-/*Come*/
-.come {
-  height: 30px;
-  width: 50px;
+/*Smooth Scrolling*/
+header > a {
+  cursor: pointer;
+}
+header > a:hover {
+  color: var(--light-gray) !important;
 }
 
 @media (max-height: 600px) {
