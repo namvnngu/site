@@ -10,33 +10,33 @@ const Skills = () => {
 			<p className="hi">Skills</p>
 			<div id="skills" className="skills" >
 
-				<SkillItem 
+				<SkillItem
 					icon={WebDevIcon}
 					name={"Web Development"}
 					text={"Build back-end by .NET Core and Node.js, and front-end by React.js"}
-					authorLink={"www.flat-icons.com/"}
-					author={"Flat Icons"}
+					authorLink={"www.flaticon.com/authors/srip"}
+					author={"srip"}
 				/>
-				<SkillItem 
+				<SkillItem
 					icon={PL}
 					name={"Programming Language"}
 					text={"C++, C#, Python and Javascript"}
-					authorLink={"www.flaticon.com/authors/becris"}
-					author={"Becris"}
+					authorLink={"www.flaticon.com/authors/srip"}
+					author={"srip"}
 				/>
-				<SkillItem 
+				<SkillItem
 					icon={CodeEditor}
 					name={"Code Editor"}
 					text={"Vim and Visual Studio Code"}
-					authorLink={"www.flaticon.com/authors/freepik"}
-					author={"Freepik"}
+					authorLink={"www.flaticon.com/authors/srip"}
+					author={"srip"}
 				/>
-				<SkillItem 
+				<SkillItem
 					icon={Others}
 					name={"Other skills"}
 					text={"Final Cut Pro, self-taught, teamwork and self-management"}
-					authorLink={"https://www.flaticon.com/authors/becris"}
-					author={"Becris"}
+					authorLink={"www.flaticon.com/authors/srip"}
+					author={"srip"}
 				/>
 			</div>
 		</div>
@@ -47,7 +47,7 @@ const SkillItem = ({ icon, name, text, authorLink, author }) => {
 	return (
 		<div className="skill-item">
 			<div className="skill-icon">
-				<img src={icon} alt="Error" />
+				<img src={icon} alt="Error" style={{ color: "white" }} />
 			</div>
 			<div className="skill-name">
 				{name}

@@ -3,9 +3,9 @@ import { FaLinkedin, FaGithub, FaFacebook, FaTwitter } from 'react-icons/fa';
 import { GrInstagram } from 'react-icons/gr';
 
 const Social = () => {
-	return (
-		<>
-			<ul className="social">
+    return (
+        <>
+            <ul className="social">
                 <li>
                     <a href="https://www.linkedin.com/in/nam-nguyen-cs/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className="social-icon" />
@@ -27,13 +27,13 @@ const Social = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="https://twitter.cWom/namnguyenDev" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/namnguyenDev" target="_blank" rel="noopener noreferrer">
                         <FaTwitter className="social-icon" />
                     </a>
                 </li>
             </ul>
-		</>
-	)
+        </>
+    )
 }
 
 export default Social;

@@ -145,7 +145,7 @@ li {
 
 /*Body*/
 .body-container {
-  background: #203a43;
+  background: #282d3f;
   /* background-image: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); */
   padding: 50px 0;
 }
@@ -466,4 +466,3 @@ small {
     margin: 100px 0;
   }
 }
-
