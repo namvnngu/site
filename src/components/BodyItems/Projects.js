@@ -2,32 +2,28 @@ import React from 'react';
 import ChatApp from '../../static/Projects/chat.png';
 import VocabularyApp from '../../static/Projects/vocabulary.png';
 import Stationery from '../../static/Projects/stationery.png';
+import OrderManagement from '../../static/Projects/orders-mangement.png'
+import projects from '../../static/Projects/projects.json';
 
+const images = [OrderManagement, Stationery, ChatApp, VocabularyApp]
 const Projects = () => {
 	return (
 		<div className="projects" id="projects">
 			<p className="hi">Side Projects</p>
 			<div className="project-list">
-				<Project
-					link={"https://github.com/nnfunny/stationery-online-shop"}
-					image={Stationery}
-					name={"Stationery Online Shop"}
-					technology={"React.js/.NET Core"}
-				/>
-				<Project
-					link={"https://github.com/nnfunny/chat-app-firebase"}
-					image={ChatApp}
-					name={"Chattie Talkie"}
-					technology={"React.js/Node.js"}
-				/>
-
-				<Project
-					link={"https://github.com/nnfunny/vocabulary-cellar"}
-					image={VocabularyApp}
-					name={"Vocabulary Cellar"}
-					technology={"React.js/Electron.js"}
-				/>
-				
+				{
+					projects.map((project, index) => {
+						return (
+							<Project
+								key={index}
+								link={project.link}
+								image={images[index]}
+								name={project.name}
+								technology={project.technology}
+							/>
+						)
+					})
+				}
 			</div>
 		</div>
 	)
@@ -38,7 +34,7 @@ const Project = ({ link, image, name, technology }) => {
 		<>
 			<a href={link} className="project" target="_blank" rel="noopener noreferrer">
 				<div className="project-image">
-					<img src={image} alt="Error"/>
+					<img src={image} alt="Error" />
 				</div>
 				<div className="project-name">
 					{name}
