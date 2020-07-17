@@ -145,13 +145,17 @@ li {
 
 /*Body*/
 .body-container {
-  background: #282d3f;
+  /* background: #282d3f; */
   /* background-image: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364); */
+  background: rgba(228, 228, 228, 0.212);
   padding: 50px 0;
 }
 
 /*Me*/
 .body-container .me {
+  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
+    0px 0px 32px rgba(198, 198, 198, 0.15);
+  background: var(--white);
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   border-radius: 8px;
@@ -159,7 +163,7 @@ li {
   padding: 30px;
   margin: 50px 0;
   border: 3px solid #fff;
-  color: var(--white);
+  color: var(--gray);
   transition: all 500ms;
 }
 .body-container .me:hover {
@@ -179,6 +183,9 @@ li {
 
 /*Skill*/
 .body-container .skills-container {
+  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
+    0px 0px 32px rgba(198, 198, 198, 0.15);
+  background: var(--white);
   box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
     rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
   border-radius: 8px;
@@ -186,7 +193,7 @@ li {
   padding: 30px;
   margin: 50px 0;
   border: 3px solid #fff;
-  color: var(--white);
+  color: var(--gray);
   transition: all 500ms;
 }
 .body-container .skills-container:hover {
@@ -239,9 +246,12 @@ li {
 
 /*Education*/
 .body-container .education {
+  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
+    0px 0px 32px rgba(198, 198, 198, 0.15);
+  background: var(--white);
   padding: 30px;
   margin: 50px 0;
-  color: var(--white);
+  color: var(--gray);
 }
 .body-container .education .hi {
   font-family: "Balsamiq Sans", cursive !important;
@@ -292,12 +302,15 @@ li {
 
 /*Projects*/
 .body-container .projects {
+  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
+    0px 0px 32px rgba(198, 198, 198, 0.15);
+  background: var(--white);
   padding: 30px 0;
   margin: 50px 0;
 
   border-radius: 8px;
   border: 3px solid #fff;
-  color: var(--white);
+  color: var(--gray);
 }
 .body-container .projects .hi {
   font-family: "Balsamiq Sans", cursive !important;
@@ -313,10 +326,11 @@ li {
 }
 
 .body-container .projects .project-list .project {
-  padding: 10px 30px;
+  padding: 20px 30px;
 }
 
 .body-container .projects .project-list .project img {
+  border: 1px solid rgba(185, 185, 185, 0.384);
   height: 200px;
   width: 300px;
   border-radius: 8px;
@@ -329,12 +343,12 @@ li {
   transform: translateY(-1px) scale(1.05);
 }
 .body-container .projects .project-list .project .project-name {
-  color: var(--blue-white);
+  color: var(--gray);
   font-weight: bold;
   font-size: var(--font-zero-one);
 }
 .body-container .projects .project-list .project .project-technologies {
-  color: var(--white);
+  color: var(--light-gray);
   font-weight: 400;
   font-size: var(--font-zero);
 }
