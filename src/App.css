@@ -13,6 +13,7 @@ body,
 .App {
   height: 100%;
   width: 100%;
+  background: var(--background);
 }
 
 a {
@@ -29,6 +30,12 @@ li {
   --gray: #4e5b6a;
   --blue-white: #f0f6ff;
   --light-gray: gray;
+  --red: #fb757591;
+  --purple: #c590ef;
+  --background: rgba(228, 228, 228, 0.9);
+  --header: #728ab7;
+  --blue: #83dbd6;
+  --text: #808b9f;
   --font-zero: 12px;
   --font-zero-one: 16px;
   --font-one: 20px;
@@ -62,21 +69,22 @@ li {
   position: fixed;
   width: 100%;
   height: 60px;
-  background: var(--white);
+  background: rgba(228, 228, 228, 1);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(174, 174, 192, 0.4), -10px -10px 30px #ffffff;
 }
 
 .landing-page header a {
-  color: var(--gray);
+  color: var(--header) !important;
   font-size: var(--font-one);
   font-weight: bold;
   margin: 0 10px;
 }
 .landing-page header a:hover {
-  color: var(--light-gray);
+  color: #95a9ce !important;
 }
 
 .landing-page .brief-introduction {
@@ -88,12 +96,13 @@ li {
 }
 .landing-page .brief-introduction .title-name .title {
   text-transform: uppercase;
-  font-size: var(--font-zero-one);
-  color: var(--gray);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--header);
 }
 .landing-page .brief-introduction .title-name .name {
   font-size: var(--font-three);
-  color: var(--dark);
+  color: var(--text);
   margin: 10px 0;
   font-weight: bold;
   padding-right: 200px;
@@ -102,19 +111,22 @@ li {
   font-family: "Balsamiq Sans", cursive !important;
 }
 .landing-page .brief-introduction .title-name small {
-  color: var(--light-gray);
+  color: var(--text);
+  font-weight: 300;
 }
-.landing-page .brief-introduction .title-name img {
+.landing-page .brief-introduction .title-name image {
   border-radius: 50%;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   display: block;
   margin: 40px 0;
+  filter: saturate(0.5) !important;
+  -webkit-filter: saturate(0.5);
 }
 .landing-page .brief-introduction .title-name .email-container {
   width: fit-content;
 }
 .landing-page .brief-introduction .title-name .email {
-  color: var(--gray);
+  color: var(--text);
   transition: all 0.2s ease-in-out;
 }
 .landing-page .brief-introduction .title-name .email-line {
@@ -133,14 +145,18 @@ li {
   visibility: visible;
 }
 .landing-page .brief-introduction .social .social-icon {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin: 10px 0;
   color: var(--gray);
+  padding: 5px;
+  border-radius: 0.5em;
+  box-shadow: 10px 10px 30px rgba(174, 174, 192, 0.4), -10px -10px 30px #ffffff;
 }
 
 .landing-page .welcome {
   margin-top: 100px;
+  color: var(--text);
 }
 
 /*Body*/
@@ -153,17 +169,12 @@ li {
 
 /*Me*/
 .body-container .me {
-  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
-    0px 0px 32px rgba(198, 198, 198, 0.15);
-  background: var(--white);
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-  border-radius: 8px;
-
+  background: var(--background);
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5em;
   padding: 30px;
   margin: 50px 0;
-  border: 3px solid #fff;
-  color: var(--gray);
   transition: all 500ms;
 }
 .body-container .me:hover {
@@ -173,39 +184,33 @@ li {
 }
 .body-container .me p {
   font-size: var(--font-zero-one);
+  color: var(--text);
 }
 .body-container .me .hi {
   font-family: "Balsamiq Sans", cursive !important;
   font-weight: bold;
   text-align: center;
   font-size: var(--font-two);
+  color: var(--header);
 }
 
 /*Skill*/
 .body-container .skills-container {
-  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
-    0px 0px 32px rgba(198, 198, 198, 0.15);
-  background: var(--white);
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
-  border-radius: 8px;
+  background: var(--background);
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5em;
 
   padding: 30px;
   margin: 50px 0;
-  border: 3px solid #fff;
-  color: var(--gray);
-  transition: all 500ms;
-}
-.body-container .skills-container:hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
-    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
-  transform: translateY(-1px) scale(1.02);
+  color: var(--text);
 }
 .body-container .skills-container .hi {
   font-family: "Balsamiq Sans", cursive !important;
   font-weight: bold;
   text-align: center;
   font-size: var(--font-two);
+  color: var(--header);
 }
 .body-container .skills {
   display: flex;
@@ -214,13 +219,25 @@ li {
   overflow: hidden;
 }
 .body-container .skills .skill-item {
+  border-radius: 0.5em;
+  box-shadow: inset 9px 9px 16px rgb(163, 177, 198, 0.6),
+    inset -9px -9px 16px rgba(255, 255, 255, 0.5);
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 280px;
   margin: 10px;
+  transition: all 1000ms ease-out;
+}
+.body-container .skills .skill-item a {
+  color: var(--gray);
+}
+.body-container .skills-container .skill-item:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+    rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-1px) scale(1.02);
 }
 .body-container .skills .skill-item .skill-icon {
   height: 100px;
@@ -230,6 +247,12 @@ li {
 .body-container .skills .skill-item img {
   height: 100px;
   width: 100px;
+  filter: saturate(0.3);
+  -webkit-filter: saturate(0.3);
+}
+.body-container .skills-container .skill-item:hover img {
+  filter: saturate(1);
+  -webkit-filter: saturate(1);
 }
 .body-container .skills .skill-item .skill-name {
   font-size: var(--font-zero-one);
@@ -239,6 +262,8 @@ li {
   font-size: var(--font-zero);
   margin-bottom: 15px;
   text-transform: italic;
+  width: 180px;
+  text-align: center;
 }
 .body-container .skills .skill-item small {
   font-size: 8px;
@@ -246,18 +271,20 @@ li {
 
 /*Education*/
 .body-container .education {
-  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
-    0px 0px 32px rgba(198, 198, 198, 0.15);
-  background: var(--white);
+  background: var(--background);
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5em;
   padding: 30px;
   margin: 50px 0;
-  color: var(--gray);
+  color: var(--text);
 }
 .body-container .education .hi {
   font-family: "Balsamiq Sans", cursive !important;
   font-weight: bold;
   text-align: center;
   font-size: var(--font-two);
+  color: var(--header);
 }
 .body-container .education .education-list {
   display: flex;
@@ -265,15 +292,14 @@ li {
   align-items: center;
 }
 .body-container .education .education-list .education-item {
-  border-radius: 8px;
-  border: 3px solid #fff;
+  border-radius: 0.5em;
   width: auto;
   height: auto;
   margin: 20px 20px;
   padding: 20px;
 
-  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
-    rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  box-shadow: inset 9px 9px 16px rgb(163, 177, 198, 0.6),
+    inset -9px -9px 16px rgba(255, 255, 255, 0.5);
   transition: all 500ms;
 }
 .body-container .education .education-list .education-item:hover {
@@ -302,21 +328,21 @@ li {
 
 /*Projects*/
 .body-container .projects {
-  box-shadow: 0px 0px 60px rgba(222, 222, 222, 0.42),
-    0px 0px 32px rgba(198, 198, 198, 0.15);
-  background: var(--white);
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
+  border-radius: 0.5em;
   padding: 30px 0;
   margin: 50px 0;
 
   border-radius: 8px;
-  border: 3px solid #fff;
-  color: var(--gray);
+  color: var(--text);
 }
 .body-container .projects .hi {
   font-family: "Balsamiq Sans", cursive !important;
   font-weight: bold;
   text-align: center;
   font-size: var(--font-two);
+  color: var(--header);
 }
 .body-container .projects .project-list {
   display: flex;
@@ -335,12 +361,18 @@ li {
   width: 300px;
   border-radius: 8px;
   margin-bottom: 20px;
+  box-shadow: 9px 9px 16px rgb(163, 177, 198, 0.6),
+    -9px -9px 16px rgba(255, 255, 255, 0.5);
   transition: all 500ms;
+  filter: saturate(0.3);
+  -webkit-filter: saturate(0.3);
 }
 .body-container .projects .project-list .project:hover img {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
     rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
   transform: translateY(-1px) scale(1.05);
+  filter: saturate(1);
+  -webkit-filter: saturate(1);
 }
 .body-container .projects .project-list .project .project-name {
   color: var(--gray);
@@ -452,14 +484,6 @@ small {
     margin: 5px 0;
   }
 
-  /*Skills*/
-  .body-container .skills {
-    flex-direction: column;
-  }
-  .body-container .skills .skill-item {
-    margin: 20px 0;
-  }
-
   /*Education*/
   .body-container .education .education-list {
     flex-direction: column;
@@ -479,5 +503,15 @@ small {
   }
   .landing-page .welcome {
     margin: 100px 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  /*Skills*/
+  .body-container .skills {
+    flex-direction: column;
+  }
+  .body-container .skills .skill-item {
+    margin: 20px 0;
   }
 }

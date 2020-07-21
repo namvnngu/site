@@ -11,18 +11,18 @@ const config = {
     animationData: Work.default,
     rendererSettings: {
         preserveAspectiveRatio: 'xMidYMid slice'
-    } 
+    }
 }
 
 const LandingPage = () => {
 
     return (
         <div className="landing-page container" id="home">
-            <Header/>
+            <Header />
             <div className="brief-introduction">
                 <div className="title-name">
                     <a href="https://lottiefiles.com/18123-developer" target="_blank" rel="noopener noreferrer">
-                        <Lottie options={config} height={300} width={300}/>
+                        <Lottie options={config} height={300} width={300} />
                     </a>
                     <div className="title">Junior Web Developer</div>
                     <small>Elementary Competitive Programmer</small>
@@ -33,7 +33,7 @@ const LandingPage = () => {
                         <div className="email-line"></div>
                     </div>
                 </div>
-                <Social/>
+                <Social />
             </div>
             <small className="welcome">Welcome To My World</small>
         </div >
