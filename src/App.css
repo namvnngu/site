@@ -219,7 +219,6 @@ li {
   overflow: hidden;
 }
 .body-container .skills .skill-item {
-  border-radius: 0.5em;
   box-shadow: inset 9px 9px 16px rgb(163, 177, 198, 0.6),
     inset -9px -9px 16px rgba(255, 255, 255, 0.5);
   display: flex;
@@ -230,6 +229,7 @@ li {
   height: 280px;
   margin: 10px;
   transition: all 1000ms ease-out;
+  border-radius: 0.5em;
 }
 .body-container .skills .skill-item a {
   color: var(--gray);
@@ -513,5 +513,6 @@ small {
   }
   .body-container .skills .skill-item {
     margin: 20px 0;
+    width: 270px;
   }
 }
