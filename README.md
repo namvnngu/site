@@ -1,6 +1,11 @@
-# Nam Nguyen Portfolio 🎉✨💻
+<p align="center">
+    <img src="logo.png" />
+</p>
+
+# Nam Nguyen Portfolio
 
 ##### My portfolio shows all my profile 🧑 as well as my own side projects 📝.
+
 - Front-end: React (React Hook).
 - Static Website.
 - Hosting: [Firebase](https://firebase.google.com/)
