@@ -1,0 +1,5 @@
+.home .face-image img {
+  object-fit: cover;
+  max-height: 400px;
+  width: 100%;
+}
