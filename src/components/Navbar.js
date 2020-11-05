@@ -11,7 +11,7 @@ const NavBar = () => {
   };
   return (
     <nav
-      className="navbar p-5 has-shadow is-white is-fixed-top special-box-shadow"
+      className="navbar p-5 is-white is-fixed-top special-box-shadow"
       role="navigation"
       aria-label="main navigation"
     >
@@ -29,7 +29,7 @@ const NavBar = () => {
           role="button"
           className="navbar-burger burger"
           id="burger"
-          to="/"
+          to="#"
           onClick={toggleNav}
         >
           <span></span>
@@ -44,24 +44,28 @@ const NavBar = () => {
           <Link
             className="navbar-item is-uppercase mx-3 has-text-grey btn"
             to="/"
+            onClick={toggleNav}
           >
             About Me
           </Link>
           <Link
             className="navbar-item is-uppercase mx-3 has-text-grey btn"
             to="/projects"
+            onClick={toggleNav}
           >
             Projects
           </Link>
           <Link
             className="navbar-item is-uppercase mx-3 has-text-grey btn"
             to="/resume"
+            onClick={toggleNav}
           >
             Resume
           </Link>
           <Link
             className="navbar-item is-uppercase mx-3 has-text-grey btn"
             to="/contact"
+            onClick={toggleNav}
           >
             Contact
           </Link>
