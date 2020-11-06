@@ -5,7 +5,7 @@ const Project = ({ imagePath, title, link }) => {
   return (
     <Link className="project" to={link}>
       <div className="project-image">
-        <img src={imagePath} alt="Stationary Shop" />
+        <img src={imagePath} alt={title} />
       </div>
       <div className="overlay-project-image">
         <p>{title}</p>

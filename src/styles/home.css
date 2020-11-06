@@ -1,6 +1,7 @@
 .home {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 .home .underlay-image {
   top: 0;

@@ -4,6 +4,7 @@ import EnteringLoader from "./components/EnteringLoader";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Project";
+import ProjectDescription from "./pages/ProjectDescription";
 import Resume from "./pages/Resume";
 
 const App = () => {
@@ -24,6 +25,11 @@ const App = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/projects" component={Projects} />
+            <Route
+              exact
+              path="/projects/:name"
+              component={ProjectDescription}
+            />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/resume" component={Resume} />
           </Switch>
