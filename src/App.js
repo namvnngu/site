@@ -1,42 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
-import EnteringLoader from "./components/EnteringLoader";
-import Contact from "./pages/Contact";
-import Home from "./pages/Home";
-import Projects from "./pages/Project";
-import ProjectDescription from "./pages/ProjectDescription";
-import Resume from "./pages/Resume";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import LoadingCat from './components/Loading';
+import LandingPage from './components/LandingPage';
+import Body from './components/Body';
 
-const App = () => {
+function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
-  }, []);
+    }, 1200);
+  }, [])
 
   return (
     <div className="App">
-      {loading ? (
-        <EnteringLoader />
-      ) : (
-        <>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/projects" component={Projects} />
-            <Route
-              exact
-              path="/projects/:name"
-              component={ProjectDescription}
-            />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/resume" component={Resume} />
-          </Switch>
-        </>
-      )}
+      {loading ?
+        (<LoadingCat />)
+        :
+        (
+          <div className="nam-nguyen">
+            <LandingPage />
+            <Body/>
+          </div>
+        )
+      }
     </div>
   );
-};
+}
 
 export default App;
