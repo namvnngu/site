@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/Navbar";
 // import Lottie from "react-lottie";
@@ -15,7 +15,27 @@ import UnderLayImage from "../assets/face/home.svg";
 //     preserveAspectiveRatio: "xMidYMid slice",
 //   },
 // };
+const greetings = [
+  "Hello 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "Hola 🇪🇸",
+  "Xin Chào 🇻🇳",
+  "Bonjour 🇫🇷",
+  "안녕하세요 🇰🇷",
+  "こんにちは 🇯🇵",
+  "你好 🇨🇳",
+];
+
 const Home = () => {
+  useEffect(() => {
+    const greeting = document.querySelector(".home .greetings .greeting");
+    let greetingNumber = 0;
+    setInterval(() => {
+      if (greeting) {
+        greeting.innerHTML = greetings[greetingNumber];
+        if (++greetingNumber >= greetings.length) greetingNumber = 0;
+      }
+    }, 3000);
+  }, []);
   return (
     <div className="home">
       <NavBar />
@@ -36,13 +56,17 @@ const Home = () => {
         <div className="column is-5 introduction">
           {/* Introduction */}
           <div className="px-5 py-5">
+            <p className="greetings">
+              <span className="greeting is-size-5" id="greeting">
+                Look at here
+              </span>
+            </p>
             <p
               className="is-size-4 has-text-weight-semibold"
               style={{ wordSpacing: "5px" }}
             >
-              Hi. I am Nam Nguyen. I am an avid programmer. I am passionate
-              about web development, computer graphics, and competitve
-              programming.
+              I am Nam Nguyen. I am an avid programmer. I am passionate about
+              web development, computer graphics, and competitve programming.
             </p>
           </div>
           {/* Introduction in detail */}

@@ -20,6 +20,20 @@
   max-height: 550px;
   border-radius: 50%;
 }
+.home .greetings .greeting {
+  animation: greeting 3s ease-in-out infinite;
+}
+@keyframes greeting {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @media (max-width: 770px) {
   .home .introduction {
     padding: 0 1.5rem;

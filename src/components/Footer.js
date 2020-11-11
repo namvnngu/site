@@ -1,18 +1,14 @@
-import React from 'react';
-import { FaHeart } from 'react-icons/fa';
+import React from "react";
+import { RiHeart2Fill } from "react-icons/ri";
 
 const Footer = () => {
-	return (
-		<>
-			<footer>
-	          <small>
-	            Made with
-	            <FaHeart className="heart-icon" />
-	            by Nam Nguyen
-	          </small>
-	        </footer>
-		</>
-	)
-}
+  return (
+    <div className="has-text-centered mt-4 footer-container">
+      <p className="is-size-7">
+        Made with <RiHeart2Fill /> by Nam
+      </p>
+    </div>
+  );
+};
 
 export default Footer;
