@@ -1,0 +1,38 @@
+.resume {
+  padding: 10px 20px;
+  padding-top: 150px;
+  min-height: 100vh;
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.resume .section-name {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.resume .experience .job-date {
+  text-align: end;
+}
+.resume .experience .job-name {
+  margin-bottom: 0 !important;
+}
+.resume .experience .job-title {
+  padding-bottom: 0 !important;
+}
+.resume .experience .job-date {
+  padding-bottom: 0 !important;
+}
+@media (max-width: 770px) {
+  .resume .experience .job-date {
+    text-align: start;
+  }
+  .resume .section-name {
+    text-align: center;
+  }
+}
+
+/* Skills */
+.resume .skills .skill-name {
+  margin-bottom: 0 !important;
+}
