@@ -56,7 +56,7 @@ const Resume = () => {
 
           {/* Volunteer */}
           <div className="volunteer columns">
-            <h3 className="title column section-name">EDUCATION</h3>
+            <h3 className="title column section-name">VOLUNTEER</h3>
             <div className="experiences column is-two-thirds">
               {volunteer.all.map((vol) => (
                 <SubItem item={vol} />
