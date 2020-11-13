@@ -5,6 +5,8 @@ import experience from "../assets/resume/experience";
 import skills from "../assets/resume/skills";
 import education from "../assets/resume/education";
 import volunteer from "../assets/resume/volunteer";
+import ScrollToTopButton from "../components/ScrollToTopButton";
+import Footer from "../components/Footer";
 
 const Resume = () => {
   return (
@@ -62,6 +64,8 @@ const Resume = () => {
             </div>
           </div>
         </div>
+        <ScrollToTopButton />
+        <Footer />
       </div>
     </>
   );
