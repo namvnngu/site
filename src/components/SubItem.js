@@ -2,7 +2,7 @@ import React from "react";
 
 const SubItem = ({ item }) => {
   return (
-    <div className="experience mb-6">
+    <div className="experience py-5 px-4">
       <div className="job columns">
         <div className="job-title column">
           <div className="job-name subtitle is-4 has-text-weight-semibold">
@@ -17,7 +17,9 @@ const SubItem = ({ item }) => {
           <div className="location is-italic is-size-6">{item.location}</div>
         </div>
       </div>
-      <div className="description">{item.description}</div>
+      <div className="description" style={{ lineHeight: "1.8rem" }}>
+        {item.description}
+      </div>
     </div>
   );
 };

@@ -88,7 +88,7 @@ const Home = () => {
             </p>
           </div>
           {/* Introduction in detail */}
-          <div className="py-5 px-5">
+          <div className="py-5 px-5" style={{ lineHeight: "1.7rem" }}>
             <p style={{ fontSize: "15px" }}>
               I am a third-year undergraduate student at Deakin University,
               Melbourne. I think that I am a{" "}
