@@ -56,7 +56,7 @@ const Home = () => {
       <NavBar />
       <div className="columns is-centered is-vcentered mt-6 pt-6 extend">
         {/* Left Column: Image */}
-        <div className="column face-image is-5 has-text-centered py-6">
+        <div className="column face-image is-5 has-text-centered">
           <img src={Face} alt="Landing Page" />
           {/* <a
           href="https://lottiefiles.com/18123-developer"
