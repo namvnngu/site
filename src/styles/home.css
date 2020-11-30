@@ -23,6 +23,34 @@
 .home .greetings .greeting {
   animation: greeting 3s ease-in-out infinite;
 }
+.home .btn-black {
+  background: #000;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #000;
+  color: #fff;
+  margin: 2rem 0;
+  box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
+  -webkit-transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow;
+  -webkit-transition-duration: 150ms;
+  transition-duration: 150ms;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.home .btn-black:focus,
+.home .btn-black:hover {
+  box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
+  color: #000;
+  background: #fff;
+}
+.home .btn-black:active {
+  background-color: #e5e5e5;
+  box-shadow: none;
+  -webkit-transition-duration: 10ms;
+  transition-duration: 10ms;
+}
 @keyframes greeting {
   0% {
     opacity: 0;

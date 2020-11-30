@@ -70,8 +70,8 @@ const Home = () => {
         {/* Right Column: Content */}
         <div className="column is-5 introduction">
           {/* Introduction */}
-          <div className="px-5 py-5">
-            <p className="greetings">
+          <div className="px-5 py-5 ">
+            <p className="greetings mb-4">
               <span className="greeting is-size-5" id="greeting">
                 Look at here{" "}
                 <span role="img" aria-label="rocket">
@@ -79,8 +79,11 @@ const Home = () => {
                 </span>
               </span>
             </p>
+            <Link to="/projects" className="btn-black">
+              PROJECTS →
+            </Link>
             <p
-              className="is-size-4 has-text-weight-semibold"
+              className="is-size-4 has-text-weight-semibold mt-4"
               style={{ wordSpacing: "5px" }}
             >
               I am Nam Nguyen. I am an avid programmer. I am passionate about
@@ -99,11 +102,12 @@ const Home = () => {
               </span>
               . At the moment, I specialize in{" "}
               <span className="has-text-weight-bold">web development</span>, and
-              I am learning{" "}
-              <span className="has-text-weight-bold">computer simulation</span>{" "}
-              and <span className="has-text-weight-bold">physic engine</span> by
-              myself. In my spare time, you can catch me filming, drawing pixel
-              art, reading books and learning English.
+              I am trying different areas such as{" "}
+              <span className="has-text-weight-bold">computer simulation,</span>{" "}
+              <span className="has-text-weight-bold">physic engine</span> and{" "}
+              <span className="has-text-weight-bold"> security</span> by myself.
+              In my spare time, you can catch me filming, drawing pixel art,
+              reading books and learning English.
             </p>
             <br />
             <p style={{ fontSize: "15px" }}>
