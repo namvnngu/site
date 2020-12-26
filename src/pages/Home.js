@@ -87,7 +87,7 @@ const Home = () => {
               style={{ wordSpacing: "5px" }}
             >
               I am Nam Nguyen. I am an avid programmer. I am passionate about
-              web development, computer graphics, and competitve programming.
+              web development and computer graphics.
             </p>
           </div>
           {/* Introduction in detail */}
@@ -104,7 +104,7 @@ const Home = () => {
               <span className="has-text-weight-bold">web development</span>, and
               I am trying different areas such as{" "}
               <span className="has-text-weight-bold">computer simulation,</span>{" "}
-              <span className="has-text-weight-bold">physic engine</span> and{" "}
+              <span className="has-text-weight-bold">game development</span> and{" "}
               <span className="has-text-weight-bold"> security</span> by myself.
               In my spare time, you can catch me filming, drawing pixel art,
               reading books and learning English.
