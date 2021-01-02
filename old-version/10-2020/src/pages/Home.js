@@ -56,7 +56,7 @@ const Home = () => {
       <NavBar />
       <div className="columns is-centered is-vcentered mt-6 pt-6 extend">
         {/* Left Column: Image */}
-        <div className="column face-image is-5 has-text-centered py-6">
+        <div className="column face-image is-5 has-text-centered">
           <img src={Face} alt="Landing Page" />
           {/* <a
           href="https://lottiefiles.com/18123-developer"
@@ -70,8 +70,8 @@ const Home = () => {
         {/* Right Column: Content */}
         <div className="column is-5 introduction">
           {/* Introduction */}
-          <div className="px-5 py-5">
-            <p className="greetings">
+          <div className="px-5 py-5 ">
+            <p className="greetings mb-4">
               <span className="greeting is-size-5" id="greeting">
                 Look at here{" "}
                 <span role="img" aria-label="rocket">
@@ -79,16 +79,19 @@ const Home = () => {
                 </span>
               </span>
             </p>
+            <Link to="/projects" className="btn-black">
+              PROJECTS →
+            </Link>
             <p
-              className="is-size-4 has-text-weight-semibold"
+              className="is-size-4 has-text-weight-semibold mt-4"
               style={{ wordSpacing: "5px" }}
             >
               I am Nam Nguyen. I am an avid programmer. I am passionate about
-              web development, computer graphics, and competitve programming.
+              web development and computer graphics.
             </p>
           </div>
           {/* Introduction in detail */}
-          <div className="py-5 px-5">
+          <div className="py-5 px-5" style={{ lineHeight: "1.7rem" }}>
             <p style={{ fontSize: "15px" }}>
               I am a third-year undergraduate student at Deakin University,
               Melbourne. I think that I am a{" "}
@@ -99,11 +102,12 @@ const Home = () => {
               </span>
               . At the moment, I specialize in{" "}
               <span className="has-text-weight-bold">web development</span>, and
-              I am learning{" "}
-              <span className="has-text-weight-bold">computer simulation</span>{" "}
-              and <span className="has-text-weight-bold">physic engine</span> by
-              myself. In my spare time, you can catch me filming, drawing pixel
-              art, reading books and learning English.
+              I am trying different areas such as{" "}
+              <span className="has-text-weight-bold">computer simulation,</span>{" "}
+              <span className="has-text-weight-bold">game development</span> and{" "}
+              <span className="has-text-weight-bold"> security</span> by myself.
+              In my spare time, you can catch me filming, drawing pixel art,
+              reading books and learning English.
             </p>
             <br />
             <p style={{ fontSize: "15px" }}>
