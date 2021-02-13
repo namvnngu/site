@@ -20,3 +20,28 @@
     transition: all 0.5s ease;
   }
 }
+
+@mixin nav-items-mobile {
+  @include flex-center;
+  width: 100vw;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  height: 20px;
+  list-style: none;
+  padding: 0;
+  @content;
+  li {
+    font-weight: bold;
+    margin: 0 0.2rem;
+    color: var(--additional);
+    background: var(--dark-letter);
+    padding: 5px;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+    &:hover {
+      background: var(--dark-background);
+      color: var(--light-letter);
+    }
+  }
+}
