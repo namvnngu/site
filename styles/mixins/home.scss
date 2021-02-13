@@ -1,0 +1,22 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin hamburger-framework {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+
+  span {
+    margin: 3px 0;
+    display: block;
+    height: 3.5px;
+    width: 38px;
+    opacity: 1;
+    background: var(--additional);
+    transition: all 0.5s ease;
+  }
+}
