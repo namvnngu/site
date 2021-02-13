@@ -1,12 +1,10 @@
-@mixin flex-center {
+@mixin flex-center($justify-content) {
   display: flex;
-  justify-content: center;
+  justify-content: ($justify-content);
   align-items: center;
 }
 @mixin hamburger-framework {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center(center);
   flex-direction: column;
   cursor: pointer;
 
@@ -22,7 +20,7 @@
 }
 
 @mixin nav-items-mobile {
-  @include flex-center;
+  @include flex-center(center);
   width: 100vw;
   position: absolute;
   top: 75px;
@@ -38,7 +36,7 @@
     background: var(--dark-letter);
     padding: 5px;
     border-radius: 0.5rem;
-    transition: all 0.4s ease;
+    transition: color 0.4s ease, background 0.4s ease;
     &:hover {
       background: var(--dark-background);
       color: var(--light-letter);

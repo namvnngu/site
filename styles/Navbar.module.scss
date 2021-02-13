@@ -1,9 +1,7 @@
 @import "./mixins/home.scss";
 
 .nav-container {
-  @include flex-center;
-  position: relative;
-  justify-content: space-between;
+  @include flex-center(space-between);
   padding: 0.5rem 3rem;
   background: var(--dark-letter);
   width: 100%;
@@ -12,21 +10,21 @@
 
 // Desktop
 .nav-brand-desktop {
-  @include flex-center;
+  @include flex-center(center);
   a {
-    @include flex-center;
+    @include flex-center(center);
   }
 }
 .nav-item-list-desktop {
   list-style: none;
-  @include flex-center;
+  @include flex-center(center);
 
   li {
     margin: 0 1rem;
     font-size: 1.1rem;
     font-weight: bold;
     color: var(--additional);
-    transition: all 0.4s ease;
+    transition: color 0.4s ease;
     &:hover {
       color: var(--light-letter);
     }
@@ -56,9 +54,9 @@
 
   // Mobile
   .nav-brand-mobile {
-    @include flex-center;
+    @include flex-center(center);
     a {
-      @include flex-center;
+      @include flex-center(center);
       img {
         transform: scale(0.75);
         outline: none;
@@ -69,17 +67,17 @@
     display: flex;
   }
   .nav-items-mobile {
-    @include flex-center;
+    @include flex-center(center);
     @include nav-items-mobile {
       transform: translateX(-1000px);
-      transition: all 0.5s ease-in;
+      transition: transform 0.5s ease-in;
     }
   }
   .nav-items-mobile-active {
-    @include flex-center;
+    @include flex-center(center);
     @include nav-items-mobile {
       transform: translateX(0);
-      transition: all 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      transition: transform 0.5s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     }
   }
 
