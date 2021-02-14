@@ -1,7 +1,10 @@
-@import "./mixins/home.scss";
+@import "./mixins/navbar.scss";
 
 .nav-container {
   @include flex-center(space-between);
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0.5rem 3rem;
   background: var(--dark-letter);
   width: 100%;
