@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import styles from "../../styles/Home.module.scss";
+import styles from "../../styles/MainImage.module.scss";
 
 const MainImage = () => {
   const [blur, setBlur] = useState(true);
