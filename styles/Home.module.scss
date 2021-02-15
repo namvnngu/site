@@ -1,8 +1,40 @@
+@import "./utils/flex";
+
 .home {
   padding-top: 75px;
 }
 .main-image-container {
+  position: relative;
+}
+.titles {
+  margin-left: 10%;
+  position: absolute;
+  top: calc(50% - 90px);
+  h1,
+  p {
+    color: var(--light-letter);
+    margin: 0;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  p:nth-child(1) {
+    @include flex-center(flex-start, center);
+  }
+  section {
+    margin: 1rem 0;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .titles {
+    margin: 0;
+    position: relative;
+    @include flex-center(center, center);
+    flex-direction: column;
+    text-align: center;
+    p:nth-child(1) {
+      @include flex-center(center, center);
+    }
+  }
 }
