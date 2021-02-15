@@ -14,12 +14,9 @@ export default function Home() {
         <div className={styles["main-image-container"]}>
           <MainImage />
           <div className={styles["titles"]}>
-            <h1>Nam Nguyen</h1>
+            <h1>Hi there!</h1>
             <section>
-              <p>
-                <span>web developer,</span>{" "}
-                <img src="/images/icons/face_24px.svg" alt="face icon" />
-              </p>
+              <p>web developer,</p>
               <p>computer science enthusiast, </p>
               <p>art enthusiast (pixel, 3D Model)</p>
             </section>
