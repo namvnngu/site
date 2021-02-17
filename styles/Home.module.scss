@@ -17,6 +17,9 @@
     color: var(--dark-letter);
     margin: 0;
   }
+  h1 {
+    height: 40px;
+  }
   p {
     font-size: 1.2rem;
   }
@@ -25,6 +28,20 @@
   }
   section {
     margin: 1rem 0;
+  }
+  span {
+    animation: greeting 3s ease-in-out infinite;
+  }
+  @keyframes greeting {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
 
