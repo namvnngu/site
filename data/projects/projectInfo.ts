@@ -72,7 +72,7 @@ const projects: Projects = {
         "/images/projects/image-processing-parallel/image-processing-thumb.png",
       date: "2020",
       collab: "Only Me",
-      programmingLanguage: "C++",
+      programmingLanguage: "C++ (CPP)",
       technologies: "OpenCV, OpenMP, MPI",
       tags: ["#computer-graphics", "#distributing-computing", "#parallel"],
       repoLink: "https://github.com/nnfunny/image-manipulation",
@@ -123,4 +123,4 @@ const projects: Projects = {
   ],
 };
 
-export default projects;
+export default projects.projects;

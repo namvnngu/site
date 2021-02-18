@@ -9,6 +9,7 @@ import styles from "../../styles/Projects.module.scss";
 
 const Projects = () => {
   const [loading, setLoading] = useState<boolean>(true);
+  const [keyword, setKeyword] = useState<string>("");
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
@@ -32,9 +33,9 @@ const Projects = () => {
             <MainImageProjects />
             <section className="container">
               <div className={styles["search-bar"]}>
-                <Searchbar />
+                <Searchbar setKeyword={setKeyword}/>
               </div>
-              <ProjectGrid />
+              <ProjectGrid keyword={keyword}/>
             </section>
           </>
         )}

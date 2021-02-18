@@ -1,28 +1,21 @@
 import { useEffect, useState } from "react";
 import styles from "../../styles/Projects.module.scss";
 import CardProject from "../CardProject";
-import { Project, Projects } from "../../data/projects/projectInfo";
 import Bouncer from "../Bouncer";
+import useFetchProject, { FetchedProjects } from "../../hooks/useFetchProject";
 
-const ProjectGrid = () => {
-  const [projects, setProjects] = useState<Project[] | null>(null);
-  const [loading, setLoading] = useState<boolean>(true);
-  useEffect(() => {
-    const fetchedData = async () => {
-      const data: Projects = (await import("../../data/projects/projectInfo"))
-        .default;
-      setProjects(data.projects);
-      setLoading(false);
-    };
-    setTimeout(() => {
-      fetchedData();
-    }, 2000);
-  }, []);
+interface ProjectGrid {
+  keyword: string;
+}
+const ProjectGrid: React.FC<ProjectGrid> = ({ keyword }) => {
+  const [projects, loading]: FetchedProjects = useFetchProject(keyword);
   return (
     <div className={styles["project-grid"]}>
       {loading ? (
-        <Bouncer />
-      ) : (
+        <div className={styles["loader-placeholder"]}>
+          <Bouncer />
+        </div>
+      ) : (projects?.length !== 0) ? (
         <>
           {projects?.map((project, index) => {
             return (
@@ -37,6 +30,8 @@ const ProjectGrid = () => {
             );
           })}
         </>
+      ) : (
+        <div className={styles["not-found"]}>Sorry. I could not find projects with "{keyword}"</div>
       )}
     </div>
   );
