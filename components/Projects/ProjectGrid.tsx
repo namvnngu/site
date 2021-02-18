@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import styles from "../../styles/Projects.module.scss";
 import CardProject from "../CardProject";
 import Bouncer from "../Bouncer";

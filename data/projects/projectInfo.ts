@@ -21,6 +21,26 @@ export type Projects = { projects: Project[] };
 const projects: Projects = {
   projects: [
     {
+      link: "/projects/portfolio",
+      params: "porfolio",
+      title: "Nam Nguyen Porfolio",
+      description:
+        "The web-based portfolio consists of my personal projects. Also, it introduces my personality, interests, hobbies as well as basic information. In the future, I could write several tech blogs about the web, life, computer science, and even game. 🌸",
+      shortDesc:
+        "The web-based portfolio consists of my personal projects. Also, it introduces my personality,... 🌸",
+      thumbnail: "/images/projects/porfolio/portfolio-thumb.png",
+      date: "2021",
+      collab: "Only Me",
+      programmingLanguage: "Typescript",
+      technologies: "Next.js, React.js, SCSS",
+      tags: ["#porfolio", "#web"],
+      repoLink: "https://github.com/nnfunny/nam-nguyen-portfolio",
+      liveDemo: "https://namnguyen.in/",
+      mediaType: "image",
+      image: "/images/projects/porfolio/portfolio-image.png",
+      logo: "/images/projects/porfolio/portfolio.svg",
+    },
+    {
       link: "/projects/ecosystem-simulation",
       params: "ecosystem-simulation",
       title: "Simple Ecosystem",
@@ -106,8 +126,10 @@ const projects: Projects = {
       link: "/projects/order-management",
       params: "order-management",
       title: "Order Management",
-      description: "A website manages clients' orders. This is a take away assignment when I applied for web developer internship",
-      shortDesc: "rrrebsite manages clients' orders. This is a take away assignment when I applied for web...",
+      description:
+        "A website manages clients' orders. This is a take away assignment when I applied for web developer internship",
+      shortDesc:
+        "rrrebsite manages clients' orders. This is a take away assignment when I applied for web...",
       thumbnail: "/images/projects/order-managment/order-management-square.png",
       date: "2020",
       collab: "Only Me",
