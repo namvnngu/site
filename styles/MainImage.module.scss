@@ -27,6 +27,17 @@
     max-height: 100%;
     object-fit: cover;
     object-position: 85% center;
+    animation: appear 1s ease;
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 .blur {
