@@ -8,7 +8,6 @@ export interface CardProjectProps {
   alt: string;
   link: string;
 }
-
 const CardProject: React.FC<CardProjectProps> = ({
   image,
   title,
@@ -19,7 +18,9 @@ const CardProject: React.FC<CardProjectProps> = ({
   return (
     <Link href={link}>
       <a>
-        <div className={styles["card"]}>
+        <div
+          className={styles["card"]}
+        >
           <span className="fill"></span>
           <section>
             <img src={image} alt={alt} />

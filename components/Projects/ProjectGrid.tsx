@@ -6,6 +6,7 @@ import useFetchProject, { FetchedProjects } from "../../hooks/useFetchProject";
 interface ProjectGrid {
   keyword: string;
 }
+
 const ProjectGrid: React.FC<ProjectGrid> = ({ keyword }) => {
   const [projects, loading]: FetchedProjects = useFetchProject(keyword);
   return (
@@ -14,7 +15,7 @@ const ProjectGrid: React.FC<ProjectGrid> = ({ keyword }) => {
         <div className={styles["loader-placeholder"]}>
           <Bouncer />
         </div>
-      ) : (projects?.length !== 0) ? (
+      ) : projects?.length !== 0 ? (
         <>
           {projects?.map((project, index) => {
             return (
@@ -30,7 +31,9 @@ const ProjectGrid: React.FC<ProjectGrid> = ({ keyword }) => {
           })}
         </>
       ) : (
-        <div className={styles["not-found"]}>Sorry. I could not find projects with "{keyword}"</div>
+        <div className={styles["not-found"]}>
+          Sorry. I could not find projects with "{keyword}"
+        </div>
       )}
     </div>
   );

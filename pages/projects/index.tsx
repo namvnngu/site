@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import CatRainbow from "../../components/CatRainbow";
-import Flipper from "../../components/Flipper";
 import MainImageProjects from "../../components/Projects/MainImageProjects";
 import ProjectGrid from "../../components/Projects/ProjectGrid";
 import Searchbar from "../../components/Projects/Searchbar";

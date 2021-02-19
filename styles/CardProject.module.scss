@@ -13,6 +13,7 @@
   transition-duration: 150ms;
   transition-timing-function: ease-in-out;
   box-shadow: 1px 1px 10px 1px var(--dark-letter);
+  animation: appear 0.5s ease;
   h2 {
     font-size: 1.4rem;
     text-align: center;
@@ -64,7 +65,18 @@
     color: var(--dark-background);
   }
   &:active {
-    transform: scale(0.9);
+    transform: scale(0.95);
     transition-duration: 10ms;
+  }
+
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }

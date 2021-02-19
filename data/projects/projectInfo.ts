@@ -22,7 +22,7 @@ const projects: Projects = {
   projects: [
     {
       link: "/projects/portfolio",
-      params: "porfolio",
+      params: "portfolio",
       title: "Nam Nguyen Porfolio",
       description:
         "The web-based portfolio consists of my personal projects. Also, it introduces my personality, interests, hobbies as well as basic information. In the future, I could write several tech blogs about the web, life, computer science, and even game. 🌸",
