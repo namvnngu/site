@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { ProjectProp } from "../../pages/projects/[slug]";
 import styles from "../../styles/Project.module.scss";
 import Back from "./Back";
+import Image from "next/image";
 
 const ProjectDesc: React.FC<ProjectProp> = ({ project, error }) => {
-  const [isLoaded, setLoaded] = useState<boolean>(true);
   return (
     <div className={styles["project-desc"]}>
       {error ? (

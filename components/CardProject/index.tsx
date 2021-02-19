@@ -1,5 +1,6 @@
 import styles from "../../styles/CardProject.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 export interface CardProjectProps {
   image: string;
@@ -18,12 +19,17 @@ const CardProject: React.FC<CardProjectProps> = ({
   return (
     <Link href={link}>
       <a>
-        <div
-          className={styles["card"]}
-        >
+        <div className={styles["card"]}>
           <span className="fill"></span>
           <section>
-            <img src={image} alt={alt} />
+            <Image
+              src={image}
+              alt={alt}
+              objectFit="cover"
+              width={250}
+              height={170}
+              quality={35}
+            />
             <h2>{title}</h2>
             <p>{description}</p>
           </section>
