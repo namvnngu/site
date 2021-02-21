@@ -1,0 +1,69 @@
+@import "./utils/flex";
+
+.contact {
+  padding-top: 75px;
+}
+.main-image-container {
+  position: relative;
+}
+.page-title {
+  position: absolute;
+  top: calc(50% - 38px);
+  left: 10%;
+  color: var(--dark-letter);
+}
+.email {
+  @include flex-center(center, center);
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  color: var(--dark-letter);
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.5s ease;
+  div {
+    @include flex-center(center, center);
+    position: relative;
+    h1 {
+      margin: 0 1rem;
+    }
+  }
+  span {
+    position: absolute;
+    top: -20px;
+    background: var(--light-letter);
+    color: var(--dark-background);
+    padding: 5px 10px;
+    border-radius: 0.5rem;
+    animation: appear 3s ease;
+  }
+  button {
+    transform: scale(0.8) translateY(-5px);
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    10% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
+.email-icon {
+  font-size: 40px;
+}
+@media screen and (max-width: 500px) {
+  .email {
+    div h1 {
+      font-size: 1rem;
+    }
+  }
+  .email-icon {
+    font-size: 1.5rem;
+  }
+}

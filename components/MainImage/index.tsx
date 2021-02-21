@@ -19,7 +19,7 @@ const MainImage: React.FC<MainImage> = ({ children }) => {
           objectFit="cover"
           layout="fill"
           objectPosition="85%"
-          quality={35}
+          quality={10}
         />
       </div>
       {children}
