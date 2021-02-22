@@ -5,14 +5,15 @@ import WorkExperience from "../../components/Resume/WorkExperience";
 import Skills from "../../components/Resume/Skills";
 import EducationList from "../../components/Resume/Education";
 import VolunteerList from "../../components/Resume/Voluteer";
+import SEO from "../../components/SEO";
 
 const Resume = () => {
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/images/personal/bee.svg" />
-        <title>Resume | Nam Nguyen</title>
-      </Head>
+      <SEO
+        title="Resume | Developer | Nam Nguyen"
+        description="My web-based resume includes professional experiences, technical skills, education, volunteer and others"
+      />
 
       <div className={styles["resume"]}>
         <MainImageResume />

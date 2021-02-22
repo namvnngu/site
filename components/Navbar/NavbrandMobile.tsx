@@ -6,7 +6,7 @@ const NavbrandMobile = () => {
     <div className={styles["nav-brand-mobile"]}>
       <Link href="/">
         <a>
-          <img src="/images/personal/bee.svg" />
+          <img src="/images/personal/bee.svg" alt="bee illustration"/>
         </a>
       </Link>
     </div>

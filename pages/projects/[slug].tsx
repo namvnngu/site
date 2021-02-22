@@ -2,14 +2,15 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import CatRainbow from "../../components/CatRainbow";
-import Back from '../../components/Project/Back'
+import Back from "../../components/Project/Back";
 import ProjectDesc from "../../components/Project/ProjectDesc";
+import SEO from "../../components/SEO";
 import projects, { Project } from "../../data/projects/projectInfo";
 import styles from "../../styles/Project.module.scss";
 
 export interface ProjectProp {
-  project?: Project,
-  error?: boolean
+  project?: Project;
+  error?: boolean;
 }
 
 const ProjectItem: React.FC<ProjectProp> = ({ project, error }) => {
@@ -21,10 +22,13 @@ const ProjectItem: React.FC<ProjectProp> = ({ project, error }) => {
   });
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/images/personal/bee.svg" />
-        <title>Projects | Nam Nguyen</title>
-      </Head>
+      <SEO
+        title={`${project?.title} | Developer | Nam Nguyen`}
+        description={
+          project?.description ??
+          "The project information includes images, technologies, date, collaboration, tags, repo link and live demo"
+        }
+      />
 
       {/* Main */}
       <div className={styles["project"]}>
@@ -34,8 +38,8 @@ const ProjectItem: React.FC<ProjectProp> = ({ project, error }) => {
           </div>
         ) : (
           <section className="container">
-            <Back/> 
-            <ProjectDesc project={project} error={error}/>
+            <Back />
+            <ProjectDesc project={project} error={error} />
           </section>
         )}
       </div>

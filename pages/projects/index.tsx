@@ -4,6 +4,7 @@ import CatRainbow from "../../components/CatRainbow";
 import MainImageProjects from "../../components/Projects/MainImageProjects";
 import ProjectGrid from "../../components/Projects/ProjectGrid";
 import Searchbar from "../../components/Projects/Searchbar";
+import SEO from "../../components/SEO";
 import styles from "../../styles/Projects.module.scss";
 
 const Projects = () => {
@@ -20,6 +21,7 @@ const Projects = () => {
         <link rel="shortcut icon" href="/images/personal/bee.svg" />
         <title>Projects | Nam Nguyen</title>
       </Head>
+      <SEO title="Projects | Developer | Nam Nguyen" description="My portfolio consists of my projects developed in my free time"/>
 
       {/* Main */}
       <div className={styles["projects"]}>

@@ -1,15 +1,16 @@
 import Head from "next/head";
 import BlogItem from "../../components/Blog/BlogItem";
 import MainImageBlog from "../../components/Blog/MainImageBlog";
+import SEO from "../../components/SEO";
 import blogItems, { IBlog } from "../../data/blog";
 import styles from "../../styles/Blog.module.scss";
 const Blogs = () => {
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/images/personal/bee.svg" />
-        <title>Blog | Nam Nguyen</title>
-      </Head>
+      <SEO
+        title="Blog | Developer | Nam Nguyen"
+        description="My blogs are written on dev.to and linked them in my personal website"
+      />
       <div className={styles["blog"]}>
         <MainImageBlog />
         <section className="container">
