@@ -14,10 +14,7 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
         type="image/svg"
       />
       <title>{title}</title>
-      <meta
-        name="description"
-        content={description}
-      />
+      <meta name="description" content={description} />
       <meta
         name="robots"
         content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
@@ -25,17 +22,14 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
       <link rel="canonical" href="https://namnguyen.in/" />
       <meta property="og:locale" content="en_AU" />
       <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content="https://namnguyen.in/" />
+      <meta property="og:site_name" content="Nam Nguyen" />
       <meta
-        property="og:title"
-        content={title}
+        property="og:image"
+        content="https://raw.githubusercontent.com/nnfunny/nnfunny/main/NamLogo.png"
       />
-      <meta
-        property="og:description"
-        content={description}
-      />
-      <meta property="og:url" content="https://namnguyen.in/"/>
-      <meta property="og:site_name" content="Nam Nguyen"/>
-      <meta property="og:image" content="/images/personal/bee.svg" />
     </Head>
   );
 };
