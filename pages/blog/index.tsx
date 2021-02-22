@@ -14,7 +14,7 @@ const Blogs = () => {
         <MainImageBlog />
         <section className="container">
           {blogItems.map((blogItem: IBlog, index: number) => (
-            <BlogItem blog={blogItem} />
+            <BlogItem key={index} blog={blogItem} />
           ))}
         </section>
       </div>
