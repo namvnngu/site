@@ -14,7 +14,7 @@ const MainImage: React.FC<MainImage> = ({ children }) => {
         className={styles["image-container"]}
       >
         <Image
-          src="/images/background/main-desktop.gif"
+          src="/images/background/main-desktop-op.gif"
           alt="Pixel art with a moon and a big yellow in jungle made by Name Nguyen"
           objectFit="cover"
           layout="fill"

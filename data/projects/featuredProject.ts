@@ -9,7 +9,7 @@ const featuredProjects: Project[] = [
       "The project Ecosystem Stimulation inspired by some game developers on Youtube gives a small view of my own simple forest 🌳",
     shortDesc:
       "A small, simple 3D project inspired by some game developers places you in a simple forsest... 🌳",
-    thumbnail: "/images/projects/ecosystem-simulation/ecosystem-thumb.png",
+    thumbnail: "/images/projects/ecosystem-simulation/ecosystem-thumb.webp",
     date: "2020",
     collab: "Only Me",
     programmingLanguage: "Javascript",
@@ -18,7 +18,7 @@ const featuredProjects: Project[] = [
     repoLink: "https://github.com/nnfunny/ecosystem-simulation",
     liveDemo: "https://nnfunny.github.io/ecosystem-simulation/",
     mediaType: "image",
-    image: "/images/projects/ecosystem-simulation/ecosystem.png",
+    image: "/images/projects/ecosystem-simulation/ecosystem.webp",
     logo: "/images/projects/ecosystem-simulation/ecosystem.svg",
   },
   {
@@ -29,7 +29,7 @@ const featuredProjects: Project[] = [
       "A website represents an online stationery shop to satisfy “back-to-school” feelings and sell beautiful notebooks, fresh pens, delightful erasers, pencil cases, etc.",
     shortDesc:
       "A website represents an online stationery shop to satisfy “back-to-school” feelings and sell beautiful notebooks...",
-    thumbnail: "/images/projects/stationery-shop/stationery-shop-square.png",
+    thumbnail: "/images/projects/stationery-shop/stationery-shop-square.webp",
     date: "2020",
     collab: "Only Me",
     programmingLanguage: "Typescript, C#",
@@ -38,7 +38,7 @@ const featuredProjects: Project[] = [
     repoLink: "https://github.com/nnfunny/stationery-online-shop",
     liveDemo: "https://online-stationery-shop.web.app",
     mediaType: "image",
-    image: "/images/projects/stationery-shop/stationery-shop.png",
+    image: "/images/projects/stationery-shop/stationery-shop.webp",
     logo: "/images/projects/stationery-shop/stationery-shop.svg",
   },
 ];
