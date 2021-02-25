@@ -30,6 +30,19 @@ const SEO: React.FC<SEOProps> = ({ title, description }) => {
         property="og:image"
         content="https://raw.githubusercontent.com/nnfunny/nnfunny/main/NamLogo.png"
       />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://namnguyen.in/" />
+      <meta property="twitter:title" content="Home | Developer | Nam Nguyen" />
+      <meta
+        property="twitter:description"
+        content="Web Developer & Front-end Develop (React). Love building programs that make people's lives eaiser. Computer Science Enthusiast & Art Enthusiast (pixel, 3D model, illustration)"
+      />
+      <meta
+        property="twitter:image"
+        content="https://raw.githubusercontent.com/nnfunny/nnfunny/main/NamLogo.png"
+      />
     </Head>
   );
 };
