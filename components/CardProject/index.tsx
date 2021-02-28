@@ -22,13 +22,9 @@ const CardProject: React.FC<CardProjectProps> = ({
         <div className={styles["card"]}>
           <span className="fill"></span>
           <section>
-            <Image
+            <img
               src={image}
               alt={alt}
-              objectFit="cover"
-              width={250}
-              height={170}
-              quality={35}
             />
             <h2>{title}</h2>
             <p>{description}</p>

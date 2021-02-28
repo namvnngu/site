@@ -92,8 +92,10 @@
   }
 }
 .tags {
+  @include flex-center(flex-start, center);
+  flex-wrap: wrap;
   span {
-    margin: 0 0.2rem;
+    margin: 0.1rem 0.2rem;
     border: 1px solid var(--light-letter);
     border-radius: 0.5rem;
     padding: 0.2rem 0.3rem;
