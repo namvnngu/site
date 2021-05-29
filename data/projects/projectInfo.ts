@@ -109,7 +109,7 @@ const projects: Projects = {
       description:
         "A website represents an online stationery shop to satisfy “back-to-school” feelings and sell beautiful notebooks, fresh pens, delightful erasers, pencil cases, etc.",
       shortDesc:
-        "A website represents an online stationery shop to satisfy “back-to-school” feelings and sell beautiful notebooks...",
+        "A website represents an online stationery shop to satisfy “back-to-school” feelings and sell...",
       thumbnail: "/images/projects/stationery-shop/stationery-shop-square.webp",
       date: "2020",
       collab: "Only Me",
