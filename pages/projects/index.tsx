@@ -17,11 +17,7 @@ const Projects = () => {
   });
   return (
     <>
-      <Head>
-        <link rel="shortcut icon" href="/images/personal/bee.svg" />
-        <title>Projects | Nam Nguyen</title>
-      </Head>
-      <SEO title="Projects | Developer | Nam Nguyen" description="My portfolio consists of my projects developed in my free time"/>
+      <SEO title="Projects | Developer | Nam Nguyen" description="My portfolio consists of my projects developed in my free time" />
 
       {/* Main */}
       <div className={styles["projects"]}>
@@ -34,9 +30,9 @@ const Projects = () => {
             <MainImageProjects />
             <section className="container">
               <div className={styles["search-bar"]}>
-                <Searchbar setKeyword={setKeyword}/>
+                <Searchbar setKeyword={setKeyword} />
               </div>
-              <ProjectGrid keyword={keyword}/>
+              <ProjectGrid keyword={keyword} />
             </section>
           </>
         )}
