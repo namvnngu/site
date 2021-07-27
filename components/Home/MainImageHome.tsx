@@ -52,7 +52,7 @@ const MainImageHome = () => {
             </span>
           </h1>
           <section>
-            <p>web developer,</p>
+            <p>front-end developer,</p>
             <p>computer science enthusiast, </p>
             <p>art enthusiast (pixel, 3D Model)</p>
           </section>
