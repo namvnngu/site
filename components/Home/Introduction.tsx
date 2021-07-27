@@ -5,7 +5,7 @@ const Introduction = () => {
     <section className="container">
       <div className={styles["introduction"]}>
         <p>
-          I am a Junior Front-end Developer in Melbourne. I think that I am a{" "}
+          I am a Junior Front-End Developer in Melbourne. I think that I am a{" "}
           <span>funny guy</span> who loves building <span>programs</span> that
           makes <span>people's lives easier</span>. At the moment, I specialize
           in web development, and I am trying different areas such as{" "}

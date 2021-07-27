@@ -17,7 +17,7 @@ const WorkExperience = () => {
                 <div className={styles["exp-title-date"]}>
                   <h1>{experience.title}</h1>
                   <span>
-                    {experience.endDate} - {experience.endDate}
+                    {experience.startDate} - {experience.endDate}
                   </span>
                 </div>
                 <div className={styles["exp-company-location"]}>

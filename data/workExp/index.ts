@@ -8,6 +8,19 @@ export interface Experience {
 }
 const experiences = [
   {
+    title: "Junior Front-End Developer",
+    company: "PointsBet",
+    startDate: "August 2021",
+    endDate: "Current",
+    location: "Melbourne, VIC, Australia",
+    description: [
+      "Engage in technical planning, development and testing activities",
+      "Implement efficient, intuitive, modular and testable code across the front-end codebase",
+      "Identify and present the technical trade-offs and risks of different development approaches in a meaningful way",
+      "Be an advocate for UX amongst the development team, and an advocate for development amongst the UX team",
+    ],
+  },
+  {
     title: "Web Development Intern",
     company: "CoXplore",
     startDate: "November 2020",
