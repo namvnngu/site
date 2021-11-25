@@ -14,7 +14,6 @@ const education: Education[] = [
     endDate: "June 2021",
     location: "Burwood, Melbourne",
     description: [
-      "Estimated completion July 2021",
       "Awarded Deakin STEM Scholarship (20% of total course tuition fees)",
       "Achieved 85 out of 100",
     ],
