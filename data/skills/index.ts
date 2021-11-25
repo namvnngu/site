@@ -5,7 +5,7 @@ export interface Skill {
 const skills: Skill[] = [
   {
     name: "Programming Lanaguages",
-    list: "C++, Python, Java, Javascript, Typescript",
+    list: "Javascript, Typescript, Rust (amateur)",
   },
   {
     name: "Front-end",
@@ -13,7 +13,7 @@ const skills: Skill[] = [
   },
   {
     name: "Back-end",
-    list: "Express.js, Spring (elementary)",
+    list: "Express.js",
   },
   {
     name: "Video Editing",
